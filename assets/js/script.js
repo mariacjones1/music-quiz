@@ -376,8 +376,37 @@ let currentScore;
 let bonusScore;
 let totalScore;
 
-function updateQuestionHtml() {
+function updateMainQuestionHtml() {
+  mainQuestionHtml = `
+  <h2>Question ${[currentQuestion+1]}</h2>
+  ${musicQuestions[currentQuestion].question}
+  <div class="answers">
+    <div>
+      <input type="radio" name="multiple-choice" class="multiple-choice" id="a">
+      <label for="a">${musicQuestions[currentQuestion].options.a}</label>
+    </div>
+    <div>
+      <input type="radio" name="multiple-choice" class="multiple-choice" id="b">
+      <label for="b">${musicQuestions[currentQuestion].options.b}</label>
+    </div>
+    <div>
+      <input type="radio" name="multiple-choice" class="multiple-choice" id="c">
+      <label for="c">${musicQuestions[currentQuestion].options.c}</label>
+    </div>
+    <div>
+      <input type="radio" name="multiple-choice" class="multiple-choice" id="d">
+      <label for="d">${musicQuestions[currentQuestion].options.d}</label>
+    </div>
+  </div>
+  `;
 
+  songInfoHtml = `
+  <h3>${musicQuestions[currentQuestion].title}</h3>
+  <h4>${musicQuestions[currentQuestion].artist}</h4>
+  `;
+
+  document.getElementById('question').innerHTML = mainQuestionHtml;
+  document.getElementById('extra').innerHTML = songInfoHtml;
 }
 
 function startQuiz() {
@@ -417,5 +446,5 @@ function createUser() {
 }
 
 function showHighScore() {
-    
+
 }
