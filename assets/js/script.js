@@ -408,6 +408,10 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 })
 
+/**
+ * Main question HTML template, provides new question
+ * and additional song information
+ */
 function updateMainQuestionHtml() {
   mainQuestionHtml = `
   <h2>Question ${[currentQuestion+1]}</h2>
@@ -449,6 +453,10 @@ function updateMainQuestionHtml() {
   document.getElementById('category-selection').style.display = 'none';
 }
 
+/**
+ * Shuffles the questions so they appear in a random
+ * order each time the user plays
+ */
 function shuffleQuestions() {
     console.log('shuffling questions');
     for (let i = quizQuestions.length - 1; i > 0; i--) {
@@ -457,6 +465,11 @@ function shuffleQuestions() {
     }
 }
 
+/**
+ * Shows the next question, called when the user starts the quiz by
+ * choosing a category or after the user clicks on a 'Next Question'
+ * button
+ */
 function nextQuestion() {
     if (currentQuestion < quizQuestions.length) {
         updateMainQuestionHtml(currentQuestion);
