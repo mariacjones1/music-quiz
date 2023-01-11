@@ -6,6 +6,26 @@ body {
     font-family: 'Roboto', sans-serif;
     background-color: #A2C4C9;
     text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header */
+header {
+    position: absolute;
+    right: 175px;
+    width: 100px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+header > input, header > label {
+    margin: 5px;
+}
+
+header > button {
+    grid-column-start: 2;
+    margin: 5px;
 }
 
 /* Main section */
