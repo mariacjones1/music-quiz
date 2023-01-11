@@ -17,6 +17,10 @@ button {
     padding: 2px;
 }
 
+img {
+    height: 200px;
+}
+
 /* Header */
 header {
     position: absolute;
@@ -39,7 +43,7 @@ header > button {
 main {
     background-color: #DDD;
     border: 2px solid black;
-    height: 500px;
+    min-height: 500px;
     margin: 2rem 10% 0;
     padding: 0 2rem;
     text-align: left;
@@ -49,4 +53,9 @@ main {
 
 #category-selection {
     text-align: center;
+    font-weight: bold;
+}
+
+#category-selection > button {
+    margin: 10px;
 }
