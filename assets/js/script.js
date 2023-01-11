@@ -1,3 +1,4 @@
+// Declare variables
 // Questions
 const generalQuestions = [
     {
@@ -185,7 +186,7 @@ const generalQuestions = [
   artist: 'Whitney Houston',
   img: '../assets/images/general/whitney-houston.jpg',
 },
-]
+];
 
 const taylorSwiftQuestions = [
     {
@@ -363,4 +364,15 @@ const taylorSwiftQuestions = [
         title: 'I Bet You Think About Me',
         img: '../assets/images/taylor-swift/i-bet-you-think-about-me.jpg',
       },
-]
+];
+
+// Other variables
+
+let currentQuestion = 0;
+let mainQuestionHtml = '';
+let songInfoHtml = '';
+let bonusQuestionHtml = '';
+let currentScore;
+let bonusScore;
+let total;
+
