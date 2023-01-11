@@ -2,6 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
 /* Global style */
+
 body {
     font-family: 'Roboto', sans-serif;
     background-color: #A2C4C9;
@@ -22,6 +23,7 @@ img {
 }
 
 /* Header */
+
 header {
     position: absolute;
     right: 175px;
@@ -40,6 +42,7 @@ header > button {
 }
 
 /* Main section */
+
 main {
     background-color: #DDD;
     border: 2px solid black;
@@ -51,6 +54,8 @@ main {
     flex-direction: column;
 }
 
+/* Home page */
+
 #category-selection {
     text-align: center;
     font-weight: bold;
@@ -58,4 +63,20 @@ main {
 
 #category-selection > button {
     margin: 10px;
+}
+
+/* Questions */
+
+.answers {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 80%;
+}
+
+#extra {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 50px;
+    text-align: center;
 }

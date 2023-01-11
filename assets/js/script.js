@@ -433,10 +433,16 @@ function updateMainQuestionHtml() {
   `;
 
   songInfoHtml = `
-  <h3>${quizQuestions[currentQuestion].title}</h3>
-  <h4>${quizQuestions[currentQuestion].artist}</h4>
-  <img src="${quizQuestions[currentQuestion].img}" alt="Picture of ${quizQuestions[currentQuestion].artist}">
-  `;
+  <div>
+    <h4>Song:</h4>
+    <h3><em>${quizQuestions[currentQuestion].title}</em></h3>
+    <h4>by</h4>
+    <h3>${quizQuestions[currentQuestion].artist}</h3>
+  </div>
+  <div>
+    <img src="${quizQuestions[currentQuestion].img}" alt="Picture of ${quizQuestions[currentQuestion].artist}">
+    </div>
+    `;
 
   document.getElementById('question').innerHTML = mainQuestionHtml;
   document.getElementById('extra').innerHTML = songInfoHtml;
