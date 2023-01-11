@@ -374,5 +374,48 @@ let songInfoHtml = '';
 let bonusQuestionHtml = '';
 let currentScore;
 let bonusScore;
-let total;
+let totalScore;
 
+function updateQuestionHtml() {
+
+}
+
+function startQuiz() {
+
+}
+
+function nextQuestion() {
+
+}
+
+function checkAnswer() {
+
+}
+
+function bonusQuestion() {
+
+}
+
+function checkBonusAnswer() {
+
+}
+
+function incrementMainScore() {
+
+}
+
+function incrementBonusScore() {
+
+}
+
+function updateTotalScore() {
+
+}
+
+function createUser() {
+
+}
+
+function showHighScore() {
+    
+}
