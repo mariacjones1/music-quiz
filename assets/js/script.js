@@ -203,6 +203,7 @@ const taylorSwiftQuestions = [
         answer: 'a',
         bonus: 2008,
         title: 'Love Story',
+        artist: 'Taylor Swift',
         img: '../assets/images/taylor-swift/love-story.jpg',
       },
 
@@ -220,6 +221,7 @@ const taylorSwiftQuestions = [
         answer: 'c',
         bonus: 2017,
         title: 'Look What You Made Me Do',
+        artist: 'Taylor Swift',
         img: '../assets/images/taylor-swift/look-what-you-made-me-do.jpg',
       },
 
@@ -237,6 +239,7 @@ const taylorSwiftQuestions = [
         answer: 'd',
         bonus: 2022,
         title: 'Anti-Hero',
+        artist: 'Taylor Swift',
         img: '../assets/images/taylor-swift/anti-hero.jpg',
       },
 
@@ -254,6 +257,7 @@ const taylorSwiftQuestions = [
         answer: 'c',
         bonus: 2007,
         title: 'Teardrops On My Guitar',
+        artist: 'Taylor Swift',
         img: '../assets/images/taylor-swift/teardrops-on-my-guitar.jpg',
       },
 
@@ -273,6 +277,7 @@ const taylorSwiftQuestions = [
         answer: 'a',
         bonus: 2020,
         title: 'willow',
+        artist: 'Taylor Swift',
         img: '../assets/images/taylor-swift/willow.jpg',
       },
 
@@ -291,6 +296,7 @@ const taylorSwiftQuestions = [
         answer: 'd',
         bonus: 2020,
         title: 'The Man',
+        artist: 'Taylor Swift',
         img: '../assets/images/taylor-swift/the-man.jpg',
       },
 
@@ -309,6 +315,7 @@ const taylorSwiftQuestions = [
         answer: 'b',
         bonus: 2009,
         title: 'You Belong With Me',
+        artist: 'Taylor Swift',
         img: '../assets/images/taylor-swift/you-belong-with-me.jpg',
       },
 
@@ -325,8 +332,9 @@ const taylorSwiftQuestions = [
             d: 'Nikes',
         },
         answer: 'c',
-        bonus: c,
-        title: 'Cardigan',
+        bonus: 2020,
+        title: 'cardigan',
+        artist: 'Taylor Swift',
         img: '../assets/images/taylor-swift/cardigan.jpg',
       },
 
@@ -344,6 +352,7 @@ const taylorSwiftQuestions = [
         answer: 'a',
         bonus: 2011,
         title: 'The Story of Us',
+        artist: 'Taylor Swift',
         img: '../assets/images/taylor-swift/the-story-of-us.jpg',
       },
 
@@ -362,6 +371,7 @@ const taylorSwiftQuestions = [
         answer: 'b',
         bonus: 2021,
         title: 'I Bet You Think About Me',
+        artist: 'Taylor Swift',
         img: '../assets/images/taylor-swift/i-bet-you-think-about-me.jpg',
       },
 ];
@@ -385,15 +395,17 @@ document.addEventListener("DOMContentLoaded", function() {
 
     for (let category of categoryButtons) {
         category.addEventListener("click", function() {
-            if (category.id === "general") {
+            if (this.id === "general") {
                 quizQuestions = generalQuestions;
-            } else if (category.id === "taylor-swift") {
+                shuffleQuestions();
+                nextQuestion();
+            } else if (this.id === "taylor-swift") {
                 quizQuestions = taylorSwiftQuestions;
+                shuffleQuestions();
+                nextQuestion();
             }
         })
     }
-    shuffleQuestions(quizQuestions);
-    startQuiz();
 })
 
 function updateMainQuestionHtml() {
@@ -423,13 +435,16 @@ function updateMainQuestionHtml() {
   songInfoHtml = `
   <h3>${quizQuestions[currentQuestion].title}</h3>
   <h4>${quizQuestions[currentQuestion].artist}</h4>
+  <img src="${quizQuestions[currentQuestion].img}" alt="Picture of ${quizQuestions[currentQuestion].artist}">
   `;
 
   document.getElementById('question').innerHTML = mainQuestionHtml;
   document.getElementById('extra').innerHTML = songInfoHtml;
+  document.getElementById('category-selection').style.display = 'none';
 }
 
 function shuffleQuestions() {
+    console.log('shuffling questions');
     for (let i = quizQuestions.length - 1; i > 0; i--) {
         let q = Math.floor(Math.random() * (i + 1));
         [quizQuestions[i], quizQuestions[q]] = [quizQuestions[q], quizQuestions[i]];
@@ -437,7 +452,12 @@ function shuffleQuestions() {
 }
 
 function nextQuestion() {
-        
+    if (currentQuestion < quizQuestions.length) {
+        updateMainQuestionHtml(currentQuestion);
+    } else {
+        completeQuiz();
+    }
+    
 }
 
 function checkAnswer() {
@@ -461,6 +481,10 @@ function incrementBonusScore() {
 }
 
 function updateTotalScore() {
+
+}
+
+function completeQuiz() {
 
 }
 
