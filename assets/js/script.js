@@ -392,7 +392,7 @@ document.addEventListener("DOMContentLoaded", function() {
             }
         })
     }
-
+    shuffleQuestions(quizQuestions);
     startQuiz();
 })
 
@@ -429,12 +429,15 @@ function updateMainQuestionHtml() {
   document.getElementById('extra').innerHTML = songInfoHtml;
 }
 
-function startQuiz() {
-
+function shuffleQuestions() {
+    for (let i = quizQuestions.length - 1; i > 0; i--) {
+        let q = Math.floor(Math.random() * (i + 1));
+        [quizQuestions[i], quizQuestions[q]] = [quizQuestions[q], quizQuestions[i]];
+    }
 }
 
 function nextQuestion() {
-
+        
 }
 
 function checkAnswer() {
