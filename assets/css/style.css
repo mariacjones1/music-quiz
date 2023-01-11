@@ -7,3 +7,19 @@ body {
     background-color: #A2C4C9;
     text-align: center;
 }
+
+/* Main section */
+main {
+    background-color: #DDD;
+    border: 2px solid black;
+    height: 500px;
+    margin: 2rem 10% 0;
+    padding: 0 2rem;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+}
+
+#category-selection {
+    text-align: center;
+}
