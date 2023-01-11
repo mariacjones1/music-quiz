@@ -369,6 +369,7 @@ const taylorSwiftQuestions = [
 // Other variables
 
 let currentQuestion = 0;
+let quizQuestions = [];
 let mainQuestionHtml = '';
 let songInfoHtml = '';
 let bonusQuestionHtml = '';
@@ -376,33 +377,52 @@ let currentScore;
 let bonusScore;
 let totalScore;
 
+// Wait for DOM to finish loading before running the quiz
+// Get category selection buttons on homepage and add event listeners
+
+document.addEventListener("DOMContentLoaded", function() {
+    let categoryButtons = document.getElementsByClassName("category");
+
+    for (let category of categoryButtons) {
+        category.addEventListener("click", function() {
+            if (category.id === "general") {
+                quizQuestions = generalQuestions;
+            } else if (category.id === "taylor-swift") {
+                quizQuestions = taylorSwiftQuestions;
+            }
+        })
+    }
+
+    startQuiz();
+})
+
 function updateMainQuestionHtml() {
   mainQuestionHtml = `
   <h2>Question ${[currentQuestion+1]}</h2>
-  ${musicQuestions[currentQuestion].question}
+  ${quizQuestions[currentQuestion].question}
   <div class="answers">
     <div>
       <input type="radio" name="multiple-choice" class="multiple-choice" id="a">
-      <label for="a">${musicQuestions[currentQuestion].options.a}</label>
+      <label for="a">${quizQuestions[currentQuestion].options.a}</label>
     </div>
     <div>
       <input type="radio" name="multiple-choice" class="multiple-choice" id="b">
-      <label for="b">${musicQuestions[currentQuestion].options.b}</label>
+      <label for="b">${quizQuestions[currentQuestion].options.b}</label>
     </div>
     <div>
       <input type="radio" name="multiple-choice" class="multiple-choice" id="c">
-      <label for="c">${musicQuestions[currentQuestion].options.c}</label>
+      <label for="c">${quizQuestions[currentQuestion].options.c}</label>
     </div>
     <div>
       <input type="radio" name="multiple-choice" class="multiple-choice" id="d">
-      <label for="d">${musicQuestions[currentQuestion].options.d}</label>
+      <label for="d">${quizQuestions[currentQuestion].options.d}</label>
     </div>
   </div>
   `;
 
   songInfoHtml = `
-  <h3>${musicQuestions[currentQuestion].title}</h3>
-  <h4>${musicQuestions[currentQuestion].artist}</h4>
+  <h3>${quizQuestions[currentQuestion].title}</h3>
+  <h4>${quizQuestions[currentQuestion].artist}</h4>
   `;
 
   document.getElementById('question').innerHTML = mainQuestionHtml;
