@@ -62,10 +62,14 @@ main {
 }
 
 #category-selection > button {
-    margin: 10px;
+    margin: 25px;
 }
 
 /* Questions */
+
+#question {
+    height: 250px;
+}
 
 .answers {
     display: flex;
@@ -83,6 +87,5 @@ main {
 
 #next-button {
     font-size: 125%;
-    margin: 2rem;
     padding: 0.5rem;
 }
