@@ -310,7 +310,7 @@ const taylorSwiftQuestions = [
             a: 'just a nerd',
             b: 'on the bleachers',
             c: 'uncoordinated',
-            d: 'in the bakcground',
+            d: 'in the background',
         },
         answer: 'b',
         bonus: 2009,
