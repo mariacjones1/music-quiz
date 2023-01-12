@@ -447,10 +447,14 @@ function updateMainQuestionHtml() {
     <img src="${quizQuestions[currentQuestion].img}" alt="Picture of ${quizQuestions[currentQuestion].artist}">
     </div>
     `;
+  
+  submitButton = `
+  <button id="submit">SUBMIT</button>
+  `
 
   document.getElementById('question').innerHTML = mainQuestionHtml;
   document.getElementById('extra').innerHTML = songInfoHtml;
-  document.getElementById('category-selection').style.display = 'none';
+  document.getElementById('category-selection').innerHTML = submitButton;
 }
 
 /**

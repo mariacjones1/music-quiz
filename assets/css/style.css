@@ -80,3 +80,9 @@ main {
     margin-top: 50px;
     text-align: center;
 }
+
+#submit {
+    font-size: 125%;
+    margin: 2rem;
+    padding: 0.5rem;
+}
