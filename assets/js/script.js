@@ -383,6 +383,7 @@ let quizQuestions = [];
 let mainQuestionHtml = '';
 let songInfoHtml = '';
 let bonusQuestionHtml = '';
+let submitButton = '';
 let currentScore;
 let bonusScore;
 let totalScore;
@@ -477,14 +478,31 @@ function shuffleQuestions() {
 function nextQuestion() {
     if (currentQuestion < quizQuestions.length) {
         updateMainQuestionHtml(currentQuestion);
+        document.getElementById('submit').addEventListener("click", function() {
+          checkAnswer();
+        });
     } else {
         completeQuiz();
     }
     
 }
 
+/**
+ * Checks selected answer against correct answer in
+ * questions array
+ */
 function checkAnswer() {
+  let userAnswer = document.querySelector('input[name="multiple-choice"]:checked').id;
+  let correctAnswer = quizQuestions[currentQuestion].answer;
 
+  if (userAnswer === correctAnswer) {
+    alert('Correct!')
+    document.getElementById('submit').innerHTML = 'BONUS QUESTION';
+    incrementMainScore();
+  } else if (userAnswer !== correctAnswer) {
+    alert('Incorrect :( The correct answer is ' + document.getElementById(correctAnswer).nextElementSibling.textContent);
+    document.getElementById('submit').innerHTML = 'NEXT QUESTION';
+    }
 }
 
 function bonusQuestion() {
