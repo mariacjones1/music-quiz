@@ -459,13 +459,13 @@ function updateMainQuestionHtml() {
 }
 
 /**
- * Shuffles the questions so they appear in a random
- * order each time the user plays
+ * Shuffles the questions so they appear in a random order
+ * each time the user plays (Fisher–Yates shuffle algorithm)
  */
 function shuffleQuestions() {
     for (let i = quizQuestions.length - 1; i > 0; i--) {
-        let q = Math.floor(Math.random() * (i + 1));
-        [quizQuestions[i], quizQuestions[q]] = [quizQuestions[q], quizQuestions[i]];
+        let j = Math.floor(Math.random() * (i + 1));
+        [quizQuestions[i], quizQuestions[j]] = [quizQuestions[j], quizQuestions[i]];
     }
 }
 
@@ -522,10 +522,27 @@ function bonusQuestion() {
 
   document.getElementById('question').innerHTML = bonusQuestionHtml;
   document.getElementById('submit').innerHTML = 'SUBMIT BONUS';
+
+  document.getElementById("submit").addEventListener("click", function() {
+    if (this.textContent === "SUBMIT BONUS") {
+      checkBonusAnswer();
+    }
+  })
+    
 }
 
 function checkBonusAnswer() {
+  let userBonusAnswer = parseInt(document.getElementById('bonus').value);
+  let correctBonusAnswer = quizQuestions[currentQuestion].bonus;
 
+  if (userBonusAnswer === correctBonusAnswer) {
+    alert('Correct!');
+    document.getElementById('submit').innerHTML = "NEXT QUESTION";
+    incrementBonusScore();
+  } else {
+    alert('Incorrect :( The correct answer is ' + correctBonusAnswer);
+    document.getElementById('submit').innerHTML = "NEXT QUESTION";
+  }
 }
 
 function incrementMainScore() {
