@@ -392,10 +392,10 @@ let totalScore;
 // Get category selection buttons on homepage and add event listeners
 
 document.addEventListener("DOMContentLoaded", function() {
-    let categoryButtons = document.getElementsByClassName("category");
+    let buttons = document.getElementsByTagName("button");
 
-    for (let category of categoryButtons) {
-        category.addEventListener("click", function() {
+    for (let button of buttons) {
+        button.addEventListener("click", function() {
             if (this.id === "general") {
                 quizQuestions = generalQuestions;
                 shuffleQuestions();
@@ -463,7 +463,6 @@ function updateMainQuestionHtml() {
  * order each time the user plays
  */
 function shuffleQuestions() {
-    console.log('shuffling questions');
     for (let i = quizQuestions.length - 1; i > 0; i--) {
         let q = Math.floor(Math.random() * (i + 1));
         [quizQuestions[i], quizQuestions[q]] = [quizQuestions[q], quizQuestions[i]];
@@ -478,18 +477,20 @@ function shuffleQuestions() {
 function nextQuestion() {
     if (currentQuestion < quizQuestions.length) {
         updateMainQuestionHtml(currentQuestion);
-        document.getElementById('submit').addEventListener("click", function() {
-          checkAnswer();
-        });
+        document.getElementById("submit").addEventListener("click", function() {
+          if (this.textContent === "SUBMIT") {
+            checkAnswer();
+          }
+        })
     } else {
         completeQuiz();
-    }
-    
+    } 
 }
 
 /**
  * Checks selected answer against correct answer in
- * questions array
+ * questions array and directs user to either the bonus
+ * question (if correct) or the next question (if incorrect)
  */
 function checkAnswer() {
   let userAnswer = document.querySelector('input[name="multiple-choice"]:checked').id;
@@ -497,16 +498,30 @@ function checkAnswer() {
 
   if (userAnswer === correctAnswer) {
     alert('Correct!')
-    document.getElementById('submit').innerHTML = 'BONUS QUESTION';
     incrementMainScore();
+    document.getElementById("submit").innerHTML = 'BONUS QUESTION';
+    document.getElementById("submit").addEventListener("click", function() {
+      bonusQuestion();
+    });
   } else if (userAnswer !== correctAnswer) {
     alert('Incorrect :( The correct answer is ' + document.getElementById(correctAnswer).nextElementSibling.textContent);
-    document.getElementById('submit').innerHTML = 'NEXT QUESTION';
-    }
+    if (currentQuestion < 9) {
+      document.getElementById('submit').innerHTML = 'NEXT QUESTION';
+    } else {
+      document.getElementById('submit').innerHTML = 'COMPLETE QUIZ';
+    }  
+  }
 }
 
 function bonusQuestion() {
+  bonusQuestionHtml = `
+  <h2>BONUS:</h2>
+  <p>What year was the song released?</p>
+  <input type="number" id="bonus" name="year" min="1970" max="2022">
+`;
 
+  document.getElementById('question').innerHTML = bonusQuestionHtml;
+  document.getElementById('submit').innerHTML = 'SUBMIT BONUS';
 }
 
 function checkBonusAnswer() {
