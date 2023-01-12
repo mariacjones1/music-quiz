@@ -535,7 +535,7 @@ function checkAnswer() {
   if (userAnswer === correctAnswer) {
     popUp.innerHTML = `
       <h2>CORRECT!</h2>
-      <p>Click below to go to the next question</p>
+      <p>Click below to go to the bonus question</p>
       ` 
     popUp.style.backgroundColor = '#B6D7A8';
     popUp.style.display = 'block';
