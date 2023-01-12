@@ -551,14 +551,17 @@ function checkBonusAnswer() {
 
 function incrementMainScore() {
   document.getElementById("correct-answers").innerText = ++currentScore;
+  updateTotalScore();
 }
 
 function incrementBonusScore() {
   document.getElementById("bonus-points").innerText = ++bonusScore;
+  updateTotalScore();
 }
 
 function updateTotalScore() {
-
+  totalScore = currentScore + bonusScore;
+  document.getElementById('total').innerText = totalScore;
 }
 
 function completeQuiz() {
