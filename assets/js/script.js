@@ -384,7 +384,7 @@ let mainQuestionHtml = '';
 let songInfoHtml = '';
 let bonusQuestionHtml = '';
 let submitButton = '';
-let currentScore;
+let currentScore = parseInt(document.getElementById("correct-answers").innerText);
 let bonusScore;
 let totalScore;
 
@@ -550,7 +550,7 @@ function checkBonusAnswer() {
 }
 
 function incrementMainScore() {
-
+  document.getElementById("correct-answers").innerText = ++currentScore;
 }
 
 function incrementBonusScore() {
