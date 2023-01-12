@@ -89,3 +89,15 @@ main {
     font-size: 125%;
     padding: 0.5rem;
 }
+
+#answer-pop-up {
+    position: absolute;
+    top: 250px;
+    width: 250px;
+    background-color: #B6D7A8;
+    border: 2px solid black;
+    padding: 10px;
+    text-align: center;
+    align-self: center;
+    display: none;
+}
