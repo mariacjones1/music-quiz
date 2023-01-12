@@ -19,6 +19,7 @@ const generalQuestions = [
         title: 'Firework',
         artist: 'Katy Perry',
         img: '../assets/images/general/katy-perry.jpg',
+        link: 'https://www.youtube.com/watch?v=QGJuMBdaqIw&ab_channel=KatyPerryVEVO',
     },
 
     {
@@ -37,6 +38,7 @@ const generalQuestions = [
         title: 'Should I Stay or Should I go?',
         artist: 'The Clash',
         img: '../assets/images/general/the-clash.jpg',
+        link: 'https://www.youtube.com/watch?v=xMaE6toi4mk&ab_channel=theclashVEVO',
     },
 
     {
@@ -55,6 +57,7 @@ const generalQuestions = [
         title: 'Blank Space',
         artist: 'Taylor Swift',
         img: '../assets/images/general/taylor-swift.jpg',
+        link: 'https://www.youtube.com/watch?v=e-ORhEE9VVg&ab_channel=TaylorSwiftVEVO',
     },
 
     {
@@ -74,6 +77,7 @@ const generalQuestions = [
       title: 'Stronger',
       artist: 'Britney Spears',
       img: '../assets/images/general/britney-spears.jpg',
+      link: 'https://www.youtube.com/watch?v=AJWtLf4-WWs&ab_channel=BritneySpearsVEVO',
   },
 
   {
@@ -93,6 +97,7 @@ const generalQuestions = [
     title: 'Torn',
     artist: 'Natalie Imbruglia',
     img: '../assets/images/general/natalie-imbruglia.jpg',
+    link: 'https://www.youtube.com/watch?v=VV1XWJN3nJo&ab_channel=natalieimbrugliaVEVO',
 },
 
 {
@@ -112,6 +117,7 @@ const generalQuestions = [
   title: 'I\'ll Be There For You',
   artist: 'The Rembrandts',
   img: '../assets/images/general/the-rembrandts.jpg',
+  link: 'https://www.youtube.com/watch?v=CXnEgbDcITo&ab_channel=TheRembrandtsVevo',
 },
 
 {
@@ -131,6 +137,7 @@ const generalQuestions = [
   title: 'Hotel California',
   artist: 'The Eagles',
   img: './assets/images/general/the-eagles.jpg',
+  link: 'https://www.youtube.com/watch?v=09839DpTctU&ab_channel=Eagles',
 },
 
 {
@@ -149,6 +156,7 @@ const generalQuestions = [
   title: 'good 4 u',
   artist: 'Olivia Rodrigo',
   img: '../assets/images/general/olivia-rodrigo.jpg',
+  link: 'https://www.youtube.com/watch?v=gNi_6U5Pm_o&ab_channel=OliviaRodrigoVEVO',
 },
 
 {
@@ -167,6 +175,7 @@ const generalQuestions = [
   title: 'Waterloo',
   artist: 'ABBA',
   img: '../assets/images/general/abba.jpg',
+  link: 'https://www.youtube.com/watch?v=Sj_9CiNkkn4&ab_channel=AbbaVEVO',
 },
 
 {
@@ -185,6 +194,7 @@ const generalQuestions = [
   title: 'I Wanna Dance With Somebody',
   artist: 'Whitney Houston',
   img: '../assets/images/general/whitney-houston.jpg',
+  link: 'https://www.youtube.com/watch?v=eH3giaIzONA&ab_channel=whitneyhoustonVEVO',
 },
 ];
 
@@ -205,6 +215,7 @@ const taylorSwiftQuestions = [
         title: 'Love Story',
         artist: 'Taylor Swift',
         img: '../assets/images/taylor-swift/love-story.jpg',
+        link: 'https://www.youtube.com/watch?v=8xg3vE8Ie_E&ab_channel=TaylorSwiftVEVO',
       },
 
       {
@@ -223,6 +234,7 @@ const taylorSwiftQuestions = [
         title: 'Look What You Made Me Do',
         artist: 'Taylor Swift',
         img: '../assets/images/taylor-swift/look-what-you-made-me-do.jpg',
+        link: 'https://www.youtube.com/watch?v=3tmd-ClpJxA&ab_channel=TaylorSwiftVEVO',
       },
 
       {
@@ -241,6 +253,7 @@ const taylorSwiftQuestions = [
         title: 'Anti-Hero',
         artist: 'Taylor Swift',
         img: '../assets/images/taylor-swift/anti-hero.jpg',
+        link: 'https://www.youtube.com/watch?v=b1kbLwvqugk&ab_channel=TaylorSwiftVEVO',
       },
 
       {
@@ -259,6 +272,7 @@ const taylorSwiftQuestions = [
         title: 'Teardrops On My Guitar',
         artist: 'Taylor Swift',
         img: '../assets/images/taylor-swift/teardrops-on-my-guitar.jpg',
+        link: 'https://www.youtube.com/watch?v=xKCek6_dB0M&ab_channel=TaylorSwiftVEVO',
       },
 
       {
@@ -279,6 +293,7 @@ const taylorSwiftQuestions = [
         title: 'willow',
         artist: 'Taylor Swift',
         img: '../assets/images/taylor-swift/willow.jpg',
+        link: 'https://www.youtube.com/watch?v=RsEZmictANA&ab_channel=TaylorSwiftVEVO',
       },
 
       {
@@ -298,6 +313,7 @@ const taylorSwiftQuestions = [
         title: 'The Man',
         artist: 'Taylor Swift',
         img: '../assets/images/taylor-swift/the-man.jpg',
+        link: 'https://www.youtube.com/watch?v=AqAJLh9wuZ0&ab_channel=TaylorSwiftVEVO',
       },
 
       {
@@ -317,6 +333,7 @@ const taylorSwiftQuestions = [
         title: 'You Belong With Me',
         artist: 'Taylor Swift',
         img: '../assets/images/taylor-swift/you-belong-with-me.jpg',
+        link: 'https://www.youtube.com/watch?v=VuNIsY6JdUw&ab_channel=TaylorSwiftVEVO',
       },
 
       {
@@ -336,6 +353,7 @@ const taylorSwiftQuestions = [
         title: 'cardigan',
         artist: 'Taylor Swift',
         img: '../assets/images/taylor-swift/cardigan.jpg',
+        link: 'https://www.youtube.com/watch?v=K-a8s8OLBSE&ab_channel=TaylorSwiftVEVO',
       },
 
       {
@@ -354,6 +372,7 @@ const taylorSwiftQuestions = [
         title: 'The Story of Us',
         artist: 'Taylor Swift',
         img: '../assets/images/taylor-swift/the-story-of-us.jpg',
+        link: 'https://www.youtube.com/watch?v=nN6VR92V70M&ab_channel=TaylorSwiftVEVO',
       },
 
       {
@@ -373,6 +392,7 @@ const taylorSwiftQuestions = [
         title: 'I Bet You Think About Me',
         artist: 'Taylor Swift',
         img: '../assets/images/taylor-swift/i-bet-you-think-about-me.jpg',
+        link: 'https://www.youtube.com/watch?v=5UMCrq-bBCg&ab_channel=TaylorSwiftVEVO',
       },
 ];
 
