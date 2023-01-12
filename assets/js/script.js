@@ -541,13 +541,20 @@ function checkBonusAnswer() {
 
   if (userBonusAnswer === correctBonusAnswer) {
     alert('Correct!');
-    document.getElementById('next-button').innerHTML = "NEXT QUESTION";
+    if (currentQuestion < 9) {
+      document.getElementById('next-button').innerHTML = 'NEXT QUESTION';
+    } else {
+      document.getElementById('next-button').innerHTML = 'COMPLETE QUIZ';
     incrementBonusScore();
+    }
   } else {
     alert('Incorrect :( The correct answer is ' + correctBonusAnswer);
-    document.getElementById('next-button').innerHTML = "NEXT QUESTION";
+    if (currentQuestion < 9) {
+      document.getElementById('next-button').innerHTML = 'NEXT QUESTION';
+    } else {
+      document.getElementById('next-button').innerHTML = 'COMPLETE QUIZ';
   }
-}
+}}
 
 function incrementMainScore() {
   document.getElementById("correct-answers").innerText = ++currentScore;
