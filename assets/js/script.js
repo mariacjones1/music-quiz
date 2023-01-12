@@ -392,22 +392,44 @@ let totalScore;
 // Get category selection buttons on homepage and add event listeners
 
 document.addEventListener("DOMContentLoaded", function() {
-    let buttons = document.getElementsByTagName("button");
+    let categories = document.getElementsByClassName("category");
 
-    for (let button of buttons) {
-        button.addEventListener("click", function() {
+    for (let category of categories) {
+        category.addEventListener("click", function() {
             if (this.id === "general") {
                 quizQuestions = generalQuestions;
                 shuffleQuestions();
-                nextQuestion();
+                runQuiz();
             } else if (this.id === "taylor-swift") {
                 quizQuestions = taylorSwiftQuestions;
                 shuffleQuestions();
-                nextQuestion();
+                runQuiz();
             }
         })
     }
 })
+
+function runQuiz() {
+  updateMainQuestionHtml(currentQuestion);
+  document.getElementById('next-button').addEventListener("click", function() {
+    if (this.textContent === "NEXT QUESTION") {
+      console.log('next question');
+      nextQuestion();
+    } else if (this.textContent === "SUBMIT") {
+      console.log('check answer');
+      checkAnswer();
+    } else if (this.textContent === "BONUS QUESTION") {
+      console.log('bonus question');
+      bonusQuestion();
+    } else if (this.textContent === "SUBMIT BONUS") {
+      console.log('check bonus');
+      checkBonusAnswer();
+    } else if (this.textContent === "FINISH QUIZ") {
+      console.log('finish quiz');
+      completeQuiz();
+    }
+  })
+}
 
 /**
  * Main question HTML template, provides new question
@@ -450,7 +472,7 @@ function updateMainQuestionHtml() {
     `;
   
   submitButton = `
-  <button id="submit">SUBMIT</button>
+  <button id="next-button">SUBMIT</button>
   `
 
   document.getElementById('question').innerHTML = mainQuestionHtml;
@@ -475,16 +497,8 @@ function shuffleQuestions() {
  * button
  */
 function nextQuestion() {
-    if (currentQuestion < quizQuestions.length) {
-        updateMainQuestionHtml(currentQuestion);
-        document.getElementById("submit").addEventListener("click", function() {
-          if (this.textContent === "SUBMIT") {
-            checkAnswer();
-          }
-        })
-    } else {
-        completeQuiz();
-    } 
+  currentQuestion++;
+  runQuiz();
 }
 
 /**
@@ -499,16 +513,13 @@ function checkAnswer() {
   if (userAnswer === correctAnswer) {
     alert('Correct!')
     incrementMainScore();
-    document.getElementById("submit").innerHTML = 'BONUS QUESTION';
-    document.getElementById("submit").addEventListener("click", function() {
-      bonusQuestion();
-    });
+    document.getElementById("next-button").innerHTML = 'BONUS QUESTION';
   } else if (userAnswer !== correctAnswer) {
     alert('Incorrect :( The correct answer is ' + document.getElementById(correctAnswer).nextElementSibling.textContent);
     if (currentQuestion < 9) {
-      document.getElementById('submit').innerHTML = 'NEXT QUESTION';
+      document.getElementById('next-button').innerHTML = 'NEXT QUESTION';
     } else {
-      document.getElementById('submit').innerHTML = 'COMPLETE QUIZ';
+      document.getElementById('next-button').innerHTML = 'COMPLETE QUIZ';
     }  
   }
 }
@@ -516,19 +527,12 @@ function checkAnswer() {
 function bonusQuestion() {
   bonusQuestionHtml = `
   <h2>BONUS:</h2>
-  <p>What year was the song released?</p>
+  <p>What year was the single released?</p>
   <input type="number" id="bonus" name="year" min="1970" max="2022">
 `;
 
   document.getElementById('question').innerHTML = bonusQuestionHtml;
-  document.getElementById('submit').innerHTML = 'SUBMIT BONUS';
-
-  document.getElementById("submit").addEventListener("click", function() {
-    if (this.textContent === "SUBMIT BONUS") {
-      checkBonusAnswer();
-    }
-  })
-    
+  document.getElementById('next-button').innerHTML = 'SUBMIT BONUS';
 }
 
 function checkBonusAnswer() {
@@ -537,11 +541,11 @@ function checkBonusAnswer() {
 
   if (userBonusAnswer === correctBonusAnswer) {
     alert('Correct!');
-    document.getElementById('submit').innerHTML = "NEXT QUESTION";
+    document.getElementById('next-button').innerHTML = "NEXT QUESTION";
     incrementBonusScore();
   } else {
     alert('Incorrect :( The correct answer is ' + correctBonusAnswer);
-    document.getElementById('submit').innerHTML = "NEXT QUESTION";
+    document.getElementById('next-button').innerHTML = "NEXT QUESTION";
   }
 }
 
