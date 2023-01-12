@@ -396,17 +396,21 @@ const taylorSwiftQuestions = [
       },
 ];
 
-// Other variables
-
+// Create questions and content
 let currentQuestion = 0;
 let quizQuestions = [];
 let mainQuestionHtml = '';
 let songInfoHtml = '';
 let bonusQuestionHtml = '';
 let submitButton = '';
+
+// Scores
 let currentScore = parseInt(document.getElementById("correct-answers").innerText);
 let bonusScore = parseInt(document.getElementById("bonus-points").innerText);
 let totalScore;
+
+// Correct and incorrect answer pop-ups
+let popUp = document.getElementById('answer-pop-up');
 
 // Wait for DOM to finish loading before running the quiz
 // Get category selection buttons on homepage and add event listeners
@@ -433,19 +437,17 @@ function runQuiz() {
   updateMainQuestionHtml(currentQuestion);
   document.getElementById('next-button').addEventListener("click", function() {
     if (this.textContent === "NEXT QUESTION") {
-      console.log('next question');
+      popUp.style.display = 'none';
       nextQuestion();
     } else if (this.textContent === "SUBMIT") {
-      console.log('check answer');
       checkAnswer();
     } else if (this.textContent === "BONUS QUESTION") {
-      console.log('bonus question');
+      popUp.style.display = 'none';
       bonusQuestion();
     } else if (this.textContent === "SUBMIT BONUS") {
-      console.log('check bonus');
       checkBonusAnswer();
     } else if (this.textContent === "FINISH QUIZ") {
-      console.log('finish quiz');
+      popUp.style.display = 'none';
       completeQuiz();
     }
   })
@@ -531,11 +533,23 @@ function checkAnswer() {
   let correctAnswer = quizQuestions[currentQuestion].answer;
 
   if (userAnswer === correctAnswer) {
-    alert('Correct!')
+    popUp.innerHTML = `
+      <h2>CORRECT!</h2>
+      <p>Click below to go to the next question</p>
+      ` 
+    popUp.style.backgroundColor = '#B6D7A8';
+    popUp.style.display = 'block';
     incrementMainScore();
     document.getElementById("next-button").innerHTML = 'BONUS QUESTION';
   } else if (userAnswer !== correctAnswer) {
-    alert('Incorrect :( The correct answer is ' + document.getElementById(correctAnswer).nextElementSibling.textContent);
+    popUp.innerHTML = `
+      <h2>Incorrect! :(</h2>
+      <p>Correct answer: ${document.getElementById(correctAnswer).nextElementSibling.textContent}</p>
+      <a href=${quizQuestions[currentQuestion].link} target="_blank" aria-label="Play the music video on YouTube (opens in a new tab)">Play song (opens in a new tab)</a>
+      <p>Click below to go to the next question</p>
+      `
+    popUp.style.backgroundColor = '#EA9999'    
+     popUp.style.display = 'block';
     if (currentQuestion < 9) {
       document.getElementById('next-button').innerHTML = 'NEXT QUESTION';
     } else {
@@ -560,15 +574,27 @@ function checkBonusAnswer() {
   let correctBonusAnswer = quizQuestions[currentQuestion].bonus;
 
   if (userBonusAnswer === correctBonusAnswer) {
-    alert('Correct!');
+    popUp.innerHTML = `
+      <h2>CORRECT!</h2>
+      <a href=${quizQuestions[currentQuestion].link} target="_blank" aria-label="Play the music video on YouTube (opens in a new tab)">Play song (opens in a new tab)</a>
+      <p>Click below to go to the next question</p>
+      `  
+    popUp.style.display = 'block';
+    incrementBonusScore();
     if (currentQuestion < 9) {
       document.getElementById('next-button').innerHTML = 'NEXT QUESTION';
     } else {
       document.getElementById('next-button').innerHTML = 'COMPLETE QUIZ';
-    incrementBonusScore();
     }
   } else {
-    alert('Incorrect :( The correct answer is ' + correctBonusAnswer);
+    popUp.innerHTML = `
+      <h2>Incorrect! :(</h2>
+      <p>Correct answer: ${correctBonusAnswer}</p>
+      <a href=${quizQuestions[currentQuestion].link} target="_blank" aria-label="Play the music video on YouTube (opens in a new tab)">Play song (opens in a new tab)</a>
+      <p>Click below to go to the next question</p>
+      `
+    popUp.style.backgroundColor = '#EA9999'    
+     popUp.style.display = 'block';
     if (currentQuestion < 9) {
       document.getElementById('next-button').innerHTML = 'NEXT QUESTION';
     } else {
