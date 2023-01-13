@@ -553,7 +553,7 @@ function checkAnswer() {
     if (currentQuestion < 9) {
       document.getElementById('next-button').innerHTML = 'NEXT QUESTION';
     } else {
-      document.getElementById('next-button').innerHTML = 'COMPLETE QUIZ';
+      document.getElementById('next-button').innerHTML = 'FINISH QUIZ';
     }  
   }
 }
@@ -584,7 +584,7 @@ function checkBonusAnswer() {
     if (currentQuestion < 9) {
       document.getElementById('next-button').innerHTML = 'NEXT QUESTION';
     } else {
-      document.getElementById('next-button').innerHTML = 'COMPLETE QUIZ';
+      document.getElementById('next-button').innerHTML = 'FINISH QUIZ';
     }
   } else {
     popUp.innerHTML = `
@@ -598,7 +598,7 @@ function checkBonusAnswer() {
     if (currentQuestion < 9) {
       document.getElementById('next-button').innerHTML = 'NEXT QUESTION';
     } else {
-      document.getElementById('next-button').innerHTML = 'COMPLETE QUIZ';
+      document.getElementById('next-button').innerHTML = 'FINISH QUIZ';
   }
 }}
 
@@ -617,7 +617,7 @@ function updateTotalScore() {
   document.getElementById('total').innerText = totalScore;
 }
 
-function finalScore() {
+function completeQuiz() {
   let finalScoreHtml = `
   <h2>Congratulations! You have completed the quiz</h2>
   <p>Correct answers: ${currentScore}</p>
@@ -630,10 +630,10 @@ function finalScore() {
   <button id="general" class="category"><img src="assets/images/home/general-music-quiz.jpg" alt="General Music Quiz"></button>
   <button id="taylor-swift" class="category"><img src="assets/images/home/taylor-swift-music-quiz.jpg" alt="Taylor Swift Music Quiz"></button>
   `
-}
 
-function completeQuiz() {
-
+  document.getElementById('question').innerHTML = finalScoreHtml;
+  document.getElementById('extra').innerHTML = '';
+  document.getElementById('category-selection').innerHTML = playAgainHtml;
 }
 
 function createUser() {
