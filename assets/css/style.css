@@ -24,7 +24,7 @@ img {
 
 /* Header */
 
-header {
+#user-sign-in {
     position: absolute;
     right: 175px;
     width: 100px;
@@ -32,11 +32,11 @@ header {
     grid-template-columns: 1fr 1fr;
 }
 
-header > input, header > label {
+#user-sign-in > input, #user-sign-in > label {
     margin: 5px;
 }
 
-header > button {
+#user-sign-in > button {
     grid-column-start: 2;
     margin: 5px;
 }
