@@ -660,7 +660,6 @@ function completeQuiz() {
 }
 
 function resetScore() {
-  console.log('resetting score');
   currentScore = 0;
   bonusScore = 0;
   totalScore = 0;
@@ -673,7 +672,6 @@ function resetScore() {
 function createUser() {
     let newUser = document.getElementById('username').value;
     window.localStorage.setItem("newUser", newUser);
-    console.log(newUser);
     showHighScore();  
 }
 
@@ -683,11 +681,10 @@ function updateHighScore() {
   console.log('updating high score');
   if (totalScore > highScore) {
     window.localStorage.setItem("highScore", totalScore);
-    console.log(highScore);
     showHighScore();
   }
 }
 
 function showHighScore() {
-  document.getElementById("user-sign-in").innerHTML = `<p>${localStorage.getItem('newUser')}: ${highScore}</p>`
+  document.getElementById("user-sign-in").innerHTML = `<p>${localStorage.getItem('newUser')}: ${localStorage.getItem('highScore')}</p>`
 }
