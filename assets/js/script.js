@@ -431,6 +431,10 @@ document.addEventListener("DOMContentLoaded", function() {
             }
         })
     }
+
+    document.getElementById("sign-in").addEventListener("click", function() {
+      createUser();
+    })
 })
 
 function runQuiz() {
@@ -653,9 +657,18 @@ function completeQuiz() {
 }
 
 function createUser() {
-
+    let newUser = document.getElementById('username').value;
+    window.localStorage.setItem("newUser", newUser);
+    console.log(newUser);
+    showHighScore();  
 }
 
 function showHighScore() {
+  let highScore = 0;
+  if (totalScore > highScore) {
+    highScore = totalScore;
+  }
+  console.log(highScore);
 
+  document.getElementById("user-sign-in").innerHTML = `<p>${localStorage.getItem('newUser')}: ${highScore}</p>`
 }
