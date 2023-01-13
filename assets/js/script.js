@@ -415,9 +415,9 @@ let popUp = document.getElementById('answer-pop-up');
 // Wait for DOM to finish loading before running the quiz
 // Get category selection buttons on homepage and add event listeners
 
-document.addEventListener("DOMContentLoaded", function() {
-    let categories = document.getElementsByClassName("category");
+let categories = document.getElementsByClassName("category");
 
+document.addEventListener("DOMContentLoaded", function() {
     for (let category of categories) {
         category.addEventListener("click", function() {
             if (this.id === "general") {
@@ -449,7 +449,7 @@ function runQuiz() {
     } else if (this.textContent === "FINISH QUIZ") {
       popUp.style.display = 'none';
       completeQuiz();
-    }
+    } 
   })
 }
 
@@ -634,6 +634,22 @@ function completeQuiz() {
   document.getElementById('question').innerHTML = finalScoreHtml;
   document.getElementById('extra').innerHTML = '';
   document.getElementById('category-selection').innerHTML = playAgainHtml;
+
+  for (let category of categories) {
+    category.addEventListener("click", function() {
+        if (this.id === "general") {
+            quizQuestions = generalQuestions;
+            shuffleQuestions();
+            currentQuestion = 0;
+            runQuiz();
+        } else if (this.id === "taylor-swift") {
+            quizQuestions = taylorSwiftQuestions;
+            shuffleQuestions();
+            currentQuestion = 0;
+            runQuiz();
+        }
+    })
+}
 }
 
 function createUser() {
