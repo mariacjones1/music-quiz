@@ -646,15 +646,24 @@ function completeQuiz() {
             quizQuestions = generalQuestions;
             shuffleQuestions();
             currentQuestion = 0;
+            resetScore();
             runQuiz();
         } else if (this.id === "taylor-swift") {
             quizQuestions = taylorSwiftQuestions;
             shuffleQuestions();
             currentQuestion = 0;
+            resetScore();
             runQuiz();
         }
     })
 }
+}
+
+function resetScore() {
+  console.log('resetting score');
+  document.getElementById('correct-answers').innerHTML = 0;
+  document.getElementById('bonus-points').innerHTML = 0;
+  document.getElementById('total').innerHTML = 0;
 }
 
 function createUser() {
@@ -667,8 +676,10 @@ function createUser() {
 let highScore = 0;
 
 function updateHighScore() {
+  console.log('updating high score');
   if (totalScore > highScore) {
     window.localStorage.setItem("highScore", totalScore);
+    console.log(highScore);
     showHighScore();
   }
 }
