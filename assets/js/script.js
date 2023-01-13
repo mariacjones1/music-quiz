@@ -638,6 +638,7 @@ function completeQuiz() {
   document.getElementById('question').innerHTML = finalScoreHtml;
   document.getElementById('extra').innerHTML = '';
   document.getElementById('category-selection').innerHTML = playAgainHtml;
+  updateHighScore();
 
   for (let category of categories) {
     category.addEventListener("click", function() {
@@ -663,12 +664,15 @@ function createUser() {
     showHighScore();  
 }
 
-function showHighScore() {
-  let highScore = 0;
-  if (totalScore > highScore) {
-    highScore = totalScore;
-  }
-  console.log(highScore);
+let highScore = 0;
 
+function updateHighScore() {
+  if (totalScore > highScore) {
+    window.localStorage.setItem("highScore", totalScore);
+    showHighScore();
+  }
+}
+
+function showHighScore() {
   document.getElementById("user-sign-in").innerHTML = `<p>${localStorage.getItem('newUser')}: ${highScore}</p>`
 }
