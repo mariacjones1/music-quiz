@@ -661,9 +661,13 @@ function completeQuiz() {
 
 function resetScore() {
   console.log('resetting score');
-  document.getElementById('correct-answers').innerHTML = 0;
-  document.getElementById('bonus-points').innerHTML = 0;
-  document.getElementById('total').innerHTML = 0;
+  currentScore = 0;
+  bonusScore = 0;
+  totalScore = 0;
+
+  document.getElementById('correct-answers').innerHTML = currentScore;
+  document.getElementById('bonus-points').innerHTML = bonusScore;
+  document.getElementById('total').innerHTML = totalScore;
 }
 
 function createUser() {
