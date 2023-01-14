@@ -412,6 +412,9 @@ let totalScore;
 // Correct and incorrect answer pop-ups
 let popUp = document.getElementById('answer-pop-up');
 
+// User
+let currentUser = '';
+
 // Wait for DOM to finish loading before running the quiz
 // Get category selection buttons on homepage and add event listeners
 
@@ -636,8 +639,19 @@ function completeQuiz() {
   `
 
   document.getElementById('question').innerHTML = finalScoreHtml;
-  document.getElementById('extra').innerHTML = '';
   document.getElementById('category-selection').innerHTML = playAgainHtml;
+
+  if (currentUser!== true) {
+    document.getElementById('extra').innerHTML = `
+    <h3>Create an account to save your high score:</h3>
+    <label for="username">Username:</label>
+    <input type="text" id="username" name="username">
+    <button id="sign-in">Register</button>
+    `
+  } else {
+    document.getElementById('extra').innerHTML = '';
+  }
+
   updateHighScore();
 
   for (let category of categories) {
