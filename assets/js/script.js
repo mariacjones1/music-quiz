@@ -434,10 +434,6 @@ document.addEventListener("DOMContentLoaded", function() {
             }
         })
     }
-
-    document.getElementById("sign-in").addEventListener("click", function() {
-      createUser();
-    })
 })
 
 function runQuiz() {
@@ -646,12 +642,16 @@ function completeQuiz() {
     <h3>Create an account to save your high score:</h3>
     <label for="username">Username:</label>
     <input type="text" id="username" name="username">
-    <button id="sign-in">Register</button>
+    <button id="register">Register</button>
     `
   } else {
     document.getElementById('extra').innerHTML = '';
   }
 
+  document.getElementById("register").addEventListener("click", function() {
+    createUser();
+  })
+  
   updateHighScore();
 
   for (let category of categories) {
