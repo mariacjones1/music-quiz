@@ -447,7 +447,11 @@ function runQuiz() {
       popUp.style.display = 'none';
       bonusQuestion();
     } else if (this.textContent === "SUBMIT BONUS") {
-      checkBonusAnswer();
+      if (document.getElementById('bonus').value !== '' && document.getElementById('bonus').value >= 1970 && document.getElementById('bonus').value <= 2022) {
+        checkBonusAnswer();
+      } else {
+        alert('Invalid answer')
+      }
     } else if (this.textContent === "FINISH QUIZ") {
       popUp.style.display = 'none';
       completeQuiz();
@@ -563,8 +567,8 @@ function checkAnswer() {
 function bonusQuestion() {
   bonusQuestionHtml = `
   <h2>BONUS:</h2>
-  <p>What year was the single released?</p>
-  <input type="number" id="bonus" name="year" min="1970" max="2022">
+  <label for="bonus">What year was the single released?</label>
+  <input type="number" id="bonus" name="year" min="1970" max="2022" required>
 `;
 
   document.getElementById('question').innerHTML = bonusQuestionHtml;
