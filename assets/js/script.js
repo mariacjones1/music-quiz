@@ -637,7 +637,7 @@ function completeQuiz() {
   document.getElementById('question').innerHTML = finalScoreHtml;
   document.getElementById('category-selection').innerHTML = playAgainHtml;
 
-  if (currentUser !== true) {
+  if (localStorage.getItem('currentUser') === false) {
     document.getElementById('extra').innerHTML = `
     <div>
       <h3>Create an account to save your high score:</h3>
@@ -646,14 +646,14 @@ function completeQuiz() {
       <button id="register">Register</button>
     </div>
     `
+    document.getElementById("register").addEventListener("click", function() {
+      createUser();
+    })
   } else {
     document.getElementById('extra').innerHTML = '';
     updateHighScore();
   }
-
-  document.getElementById("register").addEventListener("click", function() {
-    createUser();
-  })
+  
 
   for (let category of categories) {
     category.addEventListener("click", function() {
@@ -684,22 +684,22 @@ function resetScore() {
   document.getElementById('total').innerHTML = totalScore;
 }
 
+let highScore;
+
 function createUser() {
-    let newUser = document.getElementById('username').value;
-    window.localStorage.setItem("newUser", newUser);
-    showHighScore();  
+    let currentUser = document.getElementById('username').value;
+    window.localStorage.setItem("currentUser", currentUser);
+    window.localStorage.setItem("highScore", totalScore);
+    updateHighScore();  
 }
 
-let highScore = 0;
-
 function updateHighScore() {
-  console.log('updating high score');
-  if (totalScore > highScore) {
+  if (highScore > totalScore) {
     window.localStorage.setItem("highScore", totalScore);
-    showHighScore();
   }
+  showHighScore();
 }
 
 function showHighScore() {
-  document.getElementById("user-sign-in").innerHTML = `<p>${localStorage.getItem('newUser')}: ${localStorage.getItem('highScore')}</p>`
+  document.getElementById("user-sign-in").innerHTML = `<p>${localStorage.getItem('currentUser')}: ${localStorage.getItem('highScore')}</p>`
 }
