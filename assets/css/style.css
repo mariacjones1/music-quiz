@@ -24,21 +24,9 @@ img {
 
 /* Header */
 
-#user-sign-in {
+header > div {
     position: absolute;
-    right: 175px;
-    width: 100px;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-}
-
-#user-sign-in > input, #user-sign-in > label {
-    margin: 5px;
-}
-
-#user-sign-in > button {
-    grid-column-start: 2;
-    margin: 5px;
+    right: 10%;
 }
 
 /* Main section */
