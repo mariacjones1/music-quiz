@@ -11,11 +11,8 @@ body {
     padding: 0;
 }
 
-button {
+#category-selection button:hover {
     background-color: #741B74;
-    color: white;
-    font-family: 'Roboto', sans-serif;
-    padding: 2px;
 }
 
 img {
@@ -103,6 +100,13 @@ main {
 #next-button {
     font-size: 125%;
     padding: 0.5rem;
+    background-color: #A2C4C9;
+    color: black;
+}
+
+#next-button:hover {
+    background-color: #741B74;
+    color: white;
 }
 
 /* Pop-up to show after user answers question */
