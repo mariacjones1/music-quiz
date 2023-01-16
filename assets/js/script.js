@@ -701,9 +701,5 @@ function updateHighScore() {
   } else {
     console.log('no new high score');
   }
-  showHighScore();
-}
-
-function showHighScore() {
-  document.getElementById("user-sign-in").innerHTML = `<p>${localStorage.getItem('currentUser')}: ${localStorage.getItem('highScore')}</p>`
+  document.getElementById("high-score").innerHTML = `${localStorage.getItem('highScore')}`
 }
