@@ -9,10 +9,10 @@ const generalQuestions = [
         <p>Wanting to start again?</p>
         `,
         options: {
-            a: `<p>plastic bag</p>`,
-            b: `<p>ball of string</p>`,
-            c: `<p>paper bag</p>`,
-            d: `<p>sad person</p>`,
+            a: 'plastic bag',
+            b: 'ball of string',
+            c: 'paper bag',
+            d: 'sad person',
         },
         answer: 'a',
         bonus: 2010,

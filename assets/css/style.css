@@ -80,7 +80,7 @@ main {
 
 .answers label {
     background-color: #A2C4C9;
-    width: 100px;
+    width: 150px;
     padding: 10px;
     font-family: 'Roboto', sans-serif;
     border: 2px solid black;
@@ -90,6 +90,8 @@ main {
     background-color: #741B74;
     color: white;
 }
+
+/* Song info and next buttons */
 
 #extra {
     display: flex;
@@ -102,6 +104,8 @@ main {
     font-size: 125%;
     padding: 0.5rem;
 }
+
+/* Pop-up to show after user answers question */
 
 #answer-pop-up {
     position: absolute;
