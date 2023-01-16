@@ -638,24 +638,9 @@ function completeQuiz() {
 
   document.getElementById('question').innerHTML = finalScoreHtml;
   document.getElementById('category-selection').innerHTML = playAgainHtml;
+  document.getElementById('extra').innerHTML = '';
 
-  if (localStorage.getItem('currentUser') === null) {
-    document.getElementById('extra').innerHTML = `
-    <div>
-      <h3>Create an account to save your high score:</h3>
-      <label for="username">Username:</label>
-      <input type="text" id="username" name="username">
-      <button id="register">Register</button>
-    </div>
-    `
-    document.getElementById("register").addEventListener("click", function() {
-      createUser();
-    })
-  } else {
-    document.getElementById('extra').innerHTML = '';
-    updateHighScore();
-  }
-  
+  updateHighScore();  
 
   for (let category of categories) {
     category.addEventListener("click", function() {
@@ -684,13 +669,6 @@ function resetScore() {
   document.getElementById('correct-answers').innerHTML = currentScore;
   document.getElementById('bonus-points').innerHTML = bonusScore;
   document.getElementById('total').innerHTML = totalScore;
-}
-
-function createUser() {
-    let currentUser = document.getElementById('username').value;
-    window.localStorage.setItem("currentUser", currentUser);
-    window.localStorage.setItem("highScore", totalScore);
-    updateHighScore();  
 }
 
 function updateHighScore() {
