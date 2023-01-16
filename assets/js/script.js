@@ -413,9 +413,6 @@ let highScore;
 // Correct and incorrect answer pop-ups
 let popUp = document.getElementById('answer-pop-up');
 
-// User
-let currentUser = '';
-
 // Wait for DOM to finish loading before running the quiz
 // Get category selection buttons on homepage and add event listeners
 
