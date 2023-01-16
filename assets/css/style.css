@@ -78,10 +78,14 @@ main {
     width: 80%;
 }
 
+.answers > div {
+    display: flex;
+}
+
 #extra {
     display: flex;
     justify-content: space-evenly;
-    margin-top: 50px;
+    margin: 100px 0 -50px;
     text-align: center;
 }
 

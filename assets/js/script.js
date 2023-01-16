@@ -637,7 +637,7 @@ function completeQuiz() {
   document.getElementById('question').innerHTML = finalScoreHtml;
   document.getElementById('category-selection').innerHTML = playAgainHtml;
 
-  if (currentUser!== true) {
+  if (currentUser !== true) {
     document.getElementById('extra').innerHTML = `
     <div>
       <h3>Create an account to save your high score:</h3>
@@ -648,13 +648,12 @@ function completeQuiz() {
     `
   } else {
     document.getElementById('extra').innerHTML = '';
+    updateHighScore();
   }
 
   document.getElementById("register").addEventListener("click", function() {
     createUser();
   })
-  
-  updateHighScore();
 
   for (let category of categories) {
     category.addEventListener("click", function() {
