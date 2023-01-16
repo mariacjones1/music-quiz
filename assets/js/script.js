@@ -639,10 +639,12 @@ function completeQuiz() {
 
   if (currentUser!== true) {
     document.getElementById('extra').innerHTML = `
-    <h3>Create an account to save your high score:</h3>
-    <label for="username">Username:</label>
-    <input type="text" id="username" name="username">
-    <button id="register">Register</button>
+    <div>
+      <h3>Create an account to save your high score:</h3>
+      <label for="username">Username:</label>
+      <input type="text" id="username" name="username">
+      <button id="register">Register</button>
+    </div>
     `
   } else {
     document.getElementById('extra').innerHTML = '';

@@ -100,3 +100,10 @@ main {
     align-self: center;
     display: none;
 }
+
+/* Final page */
+
+#extra > div {
+    margin-bottom: 50px;
+    margin-top: -50px;
+}
