@@ -408,6 +408,7 @@ let submitButton = '';
 let currentScore = parseInt(document.getElementById("correct-answers").innerText);
 let bonusScore = parseInt(document.getElementById("bonus-points").innerText);
 let totalScore;
+let highScore;
 
 // Correct and incorrect answer pop-ups
 let popUp = document.getElementById('answer-pop-up');
@@ -421,6 +422,7 @@ let currentUser = '';
 let categories = document.getElementsByClassName("category");
 
 document.addEventListener("DOMContentLoaded", function() {
+  document.getElementById('high-score').innerHTML = window.localStorage.getItem('highScore');
     for (let category of categories) {
         category.addEventListener("click", function() {
             if (this.id === "general") {
@@ -683,8 +685,6 @@ function resetScore() {
   document.getElementById('bonus-points').innerHTML = bonusScore;
   document.getElementById('total').innerHTML = totalScore;
 }
-
-let highScore;
 
 function createUser() {
     let currentUser = document.getElementById('username').value;
