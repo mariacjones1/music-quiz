@@ -637,7 +637,7 @@ function completeQuiz() {
   document.getElementById('question').innerHTML = finalScoreHtml;
   document.getElementById('category-selection').innerHTML = playAgainHtml;
 
-  if (localStorage.getItem('currentUser') === false) {
+  if (localStorage.getItem('currentUser') === null) {
     document.getElementById('extra').innerHTML = `
     <div>
       <h3>Create an account to save your high score:</h3>
@@ -694,8 +694,12 @@ function createUser() {
 }
 
 function updateHighScore() {
-  if (highScore > totalScore) {
+  console.log('updating high score');
+  if (localStorage.getItem('highScore') < totalScore) {
+    console.log('new high score!');
     window.localStorage.setItem("highScore", totalScore);
+  } else {
+    console.log('no new high score');
   }
   showHighScore();
 }
