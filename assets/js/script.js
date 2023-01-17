@@ -419,7 +419,11 @@ let popUp = document.getElementById('answer-pop-up');
 let categories = document.getElementsByClassName("category");
 
 document.addEventListener("DOMContentLoaded", function() {
-  document.getElementById('high-score').innerHTML = window.localStorage.getItem('highScore');
+  if (window.localStorage.getItem('highScore') === null) {
+    document.getElementById('high-score').innerHTML = 0;
+  } else {
+    document.getElementById('high-score').innerHTML = window.localStorage.getItem('highScore');
+  }
     for (let category of categories) {
         category.addEventListener("click", function() {
             if (this.id === "general") {
@@ -676,6 +680,6 @@ function updateHighScore() {
   if (localStorage.getItem('highScore') < totalScore) {
     window.localStorage.setItem("highScore", totalScore);
   }
-  
+
   document.getElementById("high-score").innerHTML = `${localStorage.getItem('highScore')}`
 }
