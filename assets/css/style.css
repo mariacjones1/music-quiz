@@ -1,5 +1,5 @@
 /* Google fonts */
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bubblegum+Sans&family=Roboto&display=swap');
 
 /* Global style */
 
@@ -18,11 +18,27 @@ img {
     height: 200px;
 }
 
+a {
+    color: black;
+}
+
 /* Header */
+
+header h1 {
+    font-family: 'Bubblegum Sans', sans-serif;
+    font-weight: lighter;
+    font-size: 350%;
+    margin: 10px 0;
+}
+
+header a {
+    text-decoration: none;
+}
 
 header > div {
     position: absolute;
     right: 10%;
+    top: 25px;
 }
 
 /* Main section */
@@ -32,7 +48,7 @@ main {
     border: 2px solid black;
     min-height: 500px;
     max-width: 1200px;
-    margin: 2rem auto 0;
+    margin: 1rem auto 0;
     padding: 0 2rem;
     text-align: left;
     display: flex;
@@ -179,10 +195,6 @@ main {
 }
 
 @media screen and (max-width: 500px) {
-    header > div {
-        top: 50px;
-    }
-
     main {
         padding: 10px;
     }
