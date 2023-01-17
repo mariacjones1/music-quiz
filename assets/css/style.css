@@ -92,6 +92,14 @@ main {
     color: white;
 }
 
+#bonus {
+    font-family: 'Roboto', sans-serif;
+    font-size: 150%;
+    margin-top: 25px;
+    font-weight: bold;
+    border: 2px solid black;
+}
+
 /* Song info and next buttons */
 
 #extra {

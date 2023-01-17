@@ -572,6 +572,7 @@ function bonusQuestion() {
   bonusQuestionHtml = `
   <h2>BONUS:</h2>
   <label for="bonus">What year was the single released?</label>
+  <br>
   <input type="number" id="bonus" name="year" min="1970" max="2022" required>
 `;
 
