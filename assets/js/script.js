@@ -500,8 +500,8 @@ function updateMainQuestionHtml() {
   </div>
   <div>
     <img src="${quizQuestions[currentQuestion].img}" alt="Picture of ${quizQuestions[currentQuestion].artist}">
-    </div>
-    `;
+  </div>
+  `;
   
   submitButton = `
   <button id="next-button">SUBMIT</button>

@@ -14,10 +14,6 @@ body {
     padding: 0;
 }
 
-#category-selection button:hover {
-    background-color: #741B74;
-}
-
 img {
     height: 200px;
 }
@@ -52,6 +48,10 @@ main {
 
 #category-selection > button {
     margin: 25px;
+}
+
+#category-selection button:hover {
+    background-color: #741B74;
 }
 
 /* Questions */
@@ -127,6 +127,7 @@ main {
     position: absolute;
     top: 250px;
     width: 250px;
+    max-width: 60%;
     border: 2px solid black;
     padding: 10px;
     text-align: center;
@@ -139,4 +140,62 @@ main {
 #extra > div {
     margin-bottom: 50px;
     margin-top: -50px;
+}
+
+/* Media queries */
+
+@media screen and (max-width: 1400px) {
+    main {
+        margin: 2rem 10% 0;
+    }
+
+    .answers {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .answers {
+        width: 70%;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    #question {
+        height: auto;
+    }
+
+    #extra {
+        margin-top: 50px;
+    }
+
+    #extra > div {
+        margin: 0 20px;
+    }
+
+    #extra img {
+        margin-bottom: 50px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    header > div {
+        top: 50px;
+    }
+
+    main {
+        padding: 10px;
+    }
+
+    #category-selection > button {
+        margin: 10px 0;
+    }
+
+    #extra {
+        flex-wrap: wrap;
+    }
+
+    #answer-pop-up {
+        top: 100px;
+    }
 }
