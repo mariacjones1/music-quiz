@@ -407,8 +407,8 @@ let submitButton = '';
 // Scores
 let currentScore = parseInt(document.getElementById("correct-answers").innerText);
 let bonusScore = parseInt(document.getElementById("bonus-points").innerText);
-let totalScore;
-let highScore;
+let totalScore = parseInt(document.getElementById("total").innerText);
+let highScore = parseInt(document.getElementById("high-score").innerText);
 
 // Correct and incorrect answer pop-ups
 let popUp = document.getElementById('answer-pop-up');
@@ -673,12 +673,9 @@ function resetScore() {
 }
 
 function updateHighScore() {
-  console.log('updating high score');
   if (localStorage.getItem('highScore') < totalScore) {
-    console.log('new high score!');
     window.localStorage.setItem("highScore", totalScore);
-  } else {
-    console.log('no new high score');
   }
+  
   document.getElementById("high-score").innerHTML = `${localStorage.getItem('highScore')}`
 }
