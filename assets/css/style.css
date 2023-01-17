@@ -8,6 +8,7 @@ body {
     background-color: #A2C4C9;
     background-image: url("../images/home/background.jpg");
     background-size: cover;
+    background-repeat: no-repeat;
     text-align: center;
     margin: 0;
     padding: 0;
