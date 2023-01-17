@@ -578,6 +578,7 @@ function bonusQuestion() {
 
   document.getElementById('question').innerHTML = bonusQuestionHtml;
   document.getElementById('next-button').innerHTML = 'SUBMIT BONUS';
+  document.getElementById('bonus').focus();
 }
 
 function checkBonusAnswer() {
