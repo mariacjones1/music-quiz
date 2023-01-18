@@ -166,6 +166,7 @@ main {
 
 #error img {
     width: 200px;
+    align-self: center;
 }
 
 /* Media queries */
