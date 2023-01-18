@@ -158,6 +158,16 @@ main {
     margin-top: -50px;
 }
 
+/* Error 404 */
+
+#error {
+    text-align: center;
+}
+
+#error img {
+    width: 200px;
+}
+
 /* Media queries */
 
 @media screen and (max-width: 1400px) {
