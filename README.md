@@ -184,6 +184,7 @@ Final website: [https://mariacjones1.github.io/music-quiz/](https://mariacjones1
 | Bonus answer was accepting empty strings and invalid answers despite min- and max-values being set and having 'required' attribute. | Put bonus question label and answer input inside form element, but this did not solve it as the submit button was not inside the form element. Instead, set conditions in the JavaScript event listener that will only accept the answer if the string is not empty and is greater or equal to than 1970 and less than or equal to 2022, otherwise an alert will show. |
 | Number input for bonus question is much wider in Firefox browser than other browsers. | Set input width in CSS so it is consistent across browsers. |
 | Images and category selection buttons spill over the edges of the main section border on Dev Tools Galaxy Fold (width 280px). | Use media query to reduce image set height, width and padding and category selection button padding for smallest screen sizes (350px and below). |
+| Answer pop-up is not visible on the screen after user submits answer on any smaller device where they have had to scroll down to the submit button. User must scroll back up to see it but will not necessarily know to do that before tapping the 'next question' button. | Solved by setting the answer pop-up position to fixed, so it will always be visible as soon as it appears, regardless of the user's position on the page. |
 
 ### Browser tests (final)
 
