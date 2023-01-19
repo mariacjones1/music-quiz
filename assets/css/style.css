@@ -145,7 +145,7 @@ main {
 /* Pop-up to show after user answers question */
 
 #answer-pop-up {
-    position: absolute;
+    position: fixed;
     top: 250px;
     width: 250px;
     max-width: 60%;
