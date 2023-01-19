@@ -119,3 +119,15 @@ Final website: [https://mariacjones1.github.io/music-quiz/](https://mariacjones1
     - This will cause the questions from the selected array to be shuffled again before showing the new Question 1, so even if the user chooses the same category, the questions will appear in a different order.
 
 ![Play again](documentation/final-screen-play-again.png)
+
+- Custom 404 error page
+    - Appears if user tries to access a non-existent page on the site.
+    - Features an image from a well-known song relevant to the text (Text: 'Oops! Image from 'Oops!..I Did It Again by Britney Spears) and a link back to the homepage.
+    - Styling is consistent with the rest of the site so as not to be too jarring if it appears.
+
+![404 page content](documentation/404.png)
+
+- Favicon
+    - User experience is enhanced by featuring a favicon relevant to the site (music notes over a CD)
+
+![Favicon](documentation/favicon.png)
