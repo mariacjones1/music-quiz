@@ -173,18 +173,20 @@ Final website: [https://mariacjones1.github.io/music-quiz/](https://mariacjones1
 <hr>
 
 ## Testing
-### Bugs found and fixed during development
+### Bugs found and fixed during development and testing
 
 | Bug | Fix |
 | --- | --- |
-| Background image does not cover screen, despite background-size property being set to 'cover'. | Set HTML height to 100%, however when tested on smaller devices the background still did not cover the bottom of the screen after scrolling down. Solved by moving the HTML height property to a media query to apply only to screens with width 770px and above. |
+| Background image does not cover screen, despite background-size property being set to 'cover'. | Set HTML height to 100%, however when tested on smaller devices the background still did not cover the bottom of the screen after scrolling down. Moved the HTML height property to a media query to apply only to screens with width 770px and above. This worked fine until tested on wider devices in landscape mode, so set media query to apply only when device orientation is portrait. Final solution. |
 | Category selection buttons showed with rounded corners on mobile screen, despite no border radius property being set. This resulted in the corners of the images being cut off. When reappearing on the final page, only one button had this appearance, making them inconsitent. | Solved by setting the same padding to all sides of the category selection buttons. Also added a border so they are consistent with other buttons on the site. |
 | Question content did not change when a new question was meant to be shown. | Solved by putting question template literal into a function, to be called each time a new question was needed. |
 | No functions running on site preview. | Missing comma in question array flagged in Dev Tools. Issue solved by adding comma to JavaScript file. |
 | Bonus answer was accepting empty strings and invalid answers despite min- and max-values being set and having 'required' attribute. | Put bonus question label and answer input inside form element, but this did not solve it as the submit button was not inside the form element. Instead, set conditions in the JavaScript event listener that will only accept the answer if the string is not empty and is greater or equal to than 1970 and less than or equal to 2022, otherwise an alert will show. |
 | Number input for bonus question is much wider in Firefox browser than other browsers. | Set input width in CSS so it is consistent across browsers. |
+| Images and category selection buttons spill over the edges of the main section border on Dev Tools Galaxy Fold (width 280px). | Use media query to reduce image set height, width and padding and category selection button padding for smallest screen sizes (350px and below). |
 
-### Browser tests
+### Browser tests (final)
+
 | Browser | Passed? |
 | --- | --- |
 | Chrome | x |
@@ -193,4 +195,5 @@ Final website: [https://mariacjones1.github.io/music-quiz/](https://mariacjones1
 | Safari* | x |
 N.B. Safari tested on mobile device only.
 
-### Device/screen size tests
+### Device/screen size tests (final)
+
