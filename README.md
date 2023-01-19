@@ -182,6 +182,7 @@ Final website: [https://mariacjones1.github.io/music-quiz/](https://mariacjones1
 | Question content did not change when a new question was meant to be shown. | Solved by putting question template literal into a function, to be called each time a new question was needed. |
 | No functions running on site preview. | Missing comma in question array flagged in Dev Tools. Issue solved by adding comma to JavaScript file. |
 | Bonus answer was accepting empty strings and invalid answers despite min- and max-values being set and having 'required' attribute. | Put bonus question label and answer input inside form element, but this did not solve it as the submit button was not inside the form element. Instead, set conditions in the JavaScript event listener that will only accept the answer if the string is not empty and is greater or equal to than 1970 and less than or equal to 2022, otherwise an alert will show. |
+| Number input for bonus question is much wider in Firefox browser than other browsers. | Set input width in CSS so it is consistent across browsers. |
 
 ### Browser tests
 | Browser | Passed? |
@@ -191,3 +192,5 @@ Final website: [https://mariacjones1.github.io/music-quiz/](https://mariacjones1
 | Edge | x |
 | Safari* | x |
 N.B. Safari tested on mobile device only.
+
+### Device/screen size tests

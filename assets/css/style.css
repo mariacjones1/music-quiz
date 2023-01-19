@@ -244,9 +244,19 @@ main {
     header > div {
         top: 200px;
     }
+
+    img {
+        width: 180px;
+        height: 180px;
+        padding: 3px;
+    }
+
+    #category-selection > button {
+        padding: 0;
+    }
 }
 
-@media screen and (min-width: 770px) {
+@media screen and (min-width: 770px) and (orientation: portrait) {
     html {
         height: 100%;
     }
