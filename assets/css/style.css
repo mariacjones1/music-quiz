@@ -3,10 +3,6 @@
 
 /* Global style */
 
-html {
-    height: 100%;
-}
-
 body {
     font-family: 'Roboto', sans-serif;
     background-color: #A2C4C9;
@@ -244,5 +240,11 @@ main {
 @media screen and (max-width: 350px) {
     header > div {
         top: 200px;
+    }
+}
+
+@media screen and (min-width: 770px) {
+    html {
+        height: 100%;
     }
 }
