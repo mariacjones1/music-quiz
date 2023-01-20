@@ -230,3 +230,19 @@ N.B. Safari tested on mobile device only.
 
 **Console error:** Manifest: Line: 1, column: 1, Syntax error. site.webmanifest:1<br>
 **Solved:** Add < crossorigin="use-credentials" > to manifest link (solution found on [Denis Bouquet](https://www.denisbouquet.com/solve-manifest-line-1-column-1-syntax-error-site-webmanifest1-401-error/))
+
+<hr>
+
+## Deployment
+This site was deployed through GitHub pages using the following steps:
+1. Open the GitHub repository and go to Settings
+2. Go to Pages in the column on the left-hand side
+3. Select Source: Deploy from a branch. From the drop-down menu underneath Branch, select main and save
+4. Refresh the page after a few minutes and you will see that the site is live, with a link for you to access it
+
+The live link can be found here: [https://mariacjones1.github.io/music-quiz/](https://mariacjones1.github.io/music-quiz/)
+
+![Screenshot showing page has been deployed on GitHub](documentation/screenshots/github-deploy.png)
+
+### Forking
+Future contributors can work on the project by forking the repository. Detailed instructions for how to do so in GitHub can be found [here](https://docs.github.com/en/get-started/quickstart/contributing-to-projects), including instructions to make pull requests to have the changes merged with the original repository.
