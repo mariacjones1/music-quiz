@@ -436,9 +436,9 @@ document.addEventListener("DOMContentLoaded", function() {
                 shuffleQuestions();
                 runQuiz();
             }
-        })
+        });
     }
-})
+});
 
 /**
  * Runs next function based on text content of
@@ -459,13 +459,13 @@ function runQuiz() {
       if (document.getElementById('bonus').value !== '' && document.getElementById('bonus').value >= 1970 && document.getElementById('bonus').value <= 2022) {
         checkBonusAnswer();
       } else {
-        alert('Invalid answer')
+        alert('Invalid answer');
       }
     } else if (this.textContent === "FINISH QUIZ") {
       popUp.style.display = 'none';
       completeQuiz();
     } 
-  })
+  });
 }
 
 /**
@@ -510,7 +510,7 @@ function updateMainQuestionHtml() {
   
   submitButton = `
   <button id="next-button">SUBMIT</button>
-  `
+  `;
 
   document.getElementById('question').innerHTML = mainQuestionHtml;
   document.getElementById('extra').innerHTML = songInfoHtml;
@@ -552,7 +552,7 @@ function checkAnswer() {
     popUp.innerHTML = `
       <h2>CORRECT!</h2>
       <p>Click below to go to the bonus question</p>
-      ` 
+      `;
     popUp.style.backgroundColor = '#B6D7A8';
     popUp.style.display = 'block';
     incrementMainScore();
@@ -563,8 +563,8 @@ function checkAnswer() {
       <p>Correct answer: ${document.getElementById(correctAnswer).nextElementSibling.textContent}</p>
       <a href=${quizQuestions[currentQuestion].link} target="_blank" aria-label="Play the music video on YouTube (opens in a new tab)">Play song (opens in a new tab)</a>
       <p>Click below to go to the next question</p>
-      `
-    popUp.style.backgroundColor = '#EA9999'    
+      `;
+    popUp.style.backgroundColor = '#EA9999'; 
      popUp.style.display = 'block';
     if (currentQuestion < 9) {
       document.getElementById('next-button').innerHTML = 'NEXT QUESTION';
@@ -605,7 +605,7 @@ function checkBonusAnswer() {
       <h2>CORRECT!</h2>
       <a href=${quizQuestions[currentQuestion].link} target="_blank" aria-label="Play the music video on YouTube (opens in a new tab)">Play song (opens in a new tab)</a>
       <p>Click below to go to the next question</p>
-      `  
+      `;
     popUp.style.display = 'block';
     incrementBonusScore();
     if (currentQuestion < 9) {
@@ -619,8 +619,8 @@ function checkBonusAnswer() {
       <p>Correct answer: ${correctBonusAnswer}</p>
       <a href=${quizQuestions[currentQuestion].link} target="_blank" aria-label="Play the music video on YouTube (opens in a new tab)">Play song (opens in a new tab)</a>
       <p>Click below to go to the next question</p>
-      `
-    popUp.style.backgroundColor = '#EA9999'    
+      `;
+    popUp.style.backgroundColor = '#EA9999';    
      popUp.style.display = 'block';
     if (currentQuestion < 9) {
       document.getElementById('next-button').innerHTML = 'NEXT QUESTION';
@@ -664,13 +664,13 @@ function completeQuiz() {
   <p>Correct answers: ${currentScore}</p>
   <p>Bonus points: ${bonusScore}</p>
   <p>Total: ${totalScore}</p>
-  `
+  `;
 
   let playAgainHtml = `
   <p>Play again?</p>
   <button id="general" class="category"><img src="assets/images/home/general-music-quiz.jpg" alt="General Music Quiz"></button>
   <button id="taylor-swift" class="category"><img src="assets/images/home/taylor-swift-music-quiz.jpg" alt="Taylor Swift Music Quiz"></button>
-  `
+  `;
 
   document.getElementById('question').innerHTML = finalScoreHtml;
   document.getElementById('category-selection').innerHTML = playAgainHtml;
@@ -694,7 +694,7 @@ function completeQuiz() {
             resetScore();
             runQuiz();
         }
-    })
+    });
 }
 }
 
@@ -719,5 +719,5 @@ function updateHighScore() {
     window.localStorage.setItem("highScore", totalScore);
   }
 
-  document.getElementById("high-score").innerHTML = `${localStorage.getItem('highScore')}`
+  document.getElementById("high-score").innerHTML = `${localStorage.getItem('highScore')}`;
 }
