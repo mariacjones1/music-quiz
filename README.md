@@ -209,3 +209,4 @@ N.B. Safari tested on mobile device only.
 | iPad Air | x |
 | Surface Pro 7 | x |
 | Nest Hub | x |
+

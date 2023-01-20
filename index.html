@@ -21,36 +21,55 @@
     <!-- CSS stylesheet -->
     <link rel="stylesheet" href="assets/css/style.css">
 
+    <!-- Page title -->
     <title>Let's Get Lyrical!</title>
 </head>
-<header>
-    <a href="index.html">
-        <h1>Let's Get Lyrical! Music Quiz</h1>
-    </a>
-    <div>
-        <p>High Score: <span id="high-score">0</span></p>
-    </div>
-</header>
+
 <body>
+    
+    <!-- Header -->
+    <header>
+        <!-- Logo -->
+        <a href="index.html">
+            <h1>Let's Get Lyrical! Music Quiz</h1>
+        </a>
+
+        <!-- High score -->
+        <div>
+            <p>High Score: <span id="high-score">0</span></p>
+        </div>
+    </header>
+
+    <!-- Main section -->
     <main id="main-section">
+
+        <!-- Quiz instructions, questions or final score -->
         <section id="question">
             <h2>How to play</h2>
             <p>Each question will show you the lyrics from a well-known song, but they are incomplete! Complete the lyrics by selecting one of the multiple choice answers, then hit SUBMIT to see if you're correct.</p>
             <h2>BONUS:</h2>
             <p>There will also be a bonus point for each question you get right asking if you know what year the song was released! Enter the year and hit SUBMIT BONUS to submit your answers.</p>
         </section>
+
+        <!-- Song title, artist and image -->
         <section id="extra">
             
         </section>
+
+        <!-- Category selection or next button -->
         <section id="category-selection">
             <p>Choose a category to start:</p>
             <button id="general" class="category"><img src="assets/images/home/general-music-quiz.jpg" alt="General Music Quiz"></button>
             <button id="taylor-swift" class="category"><img src="assets/images/home/taylor-swift-music-quiz.jpg" alt="Taylor Swift Music Quiz"></button>
         </section>
+
+        <!-- Correct or incorrect anser pop-up -->
         <section id="answer-pop-up">
             
         </section>
     </main>
+
+    <!-- Real-time scores -->
     <footer>
         <p>Correct Answers: <span id="correct-answers">0</span></p>
         <p>Bonus Points: <span id="bonus-points">0</span></p>
