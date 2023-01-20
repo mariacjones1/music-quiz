@@ -227,3 +227,6 @@ N.B. Safari tested on mobile device only.
 | Accessability | 100 |
 | Best Practices | 92 |
 | SEO | 100 |
+
+**Console error:** Manifest: Line: 1, column: 1, Syntax error. site.webmanifest:1<br>
+**Solved:** Add < crossorigin="use-credentials" > to manifest link (solution found on [Denis Bouquet](https://www.denisbouquet.com/solve-manifest-line-1-column-1-syntax-error-site-webmanifest1-401-error/))
