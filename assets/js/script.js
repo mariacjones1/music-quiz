@@ -408,7 +408,6 @@ let submitButton = '';
 let currentScore = parseInt(document.getElementById("correct-answers").innerText);
 let bonusScore = parseInt(document.getElementById("bonus-points").innerText);
 let totalScore = parseInt(document.getElementById("total").innerText);
-let highScore = parseInt(document.getElementById("high-score").innerText);
 
 // Correct and incorrect answer pop-ups
 let popUp = document.getElementById('answer-pop-up');
