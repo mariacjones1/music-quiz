@@ -246,3 +246,30 @@ The live link can be found here: [https://mariacjones1.github.io/music-quiz/](ht
 
 ### Forking
 Future contributors can work on the project by forking the repository. Detailed instructions for how to do so in GitHub can be found [here](https://docs.github.com/en/get-started/quickstart/contributing-to-projects), including instructions to make pull requests to have the changes merged with the original repository.
+
+<hr>
+
+## Credits
+### Content
+- Song information, release dates and lyrics found on Google.
+<details><summary>Screenshot</summary>
+![Google lyric search](documentation/screenshots/lyric-search.png)
+</details>
+
+### Media
+- Images of artists found on Google Images.
+- Background found on [Pexels](https://www.pexels.com/photo/defocused-image-of-lights-255379/).
+- Favicon image found on [Pixabay](https://pixabay.com/users/clker-free-vector-images-3736/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=41071">Clker-Free-Vector-Images) and converted using [favicon.io](https://favicon.io/).
+- Font found on [Google Fonts](https://fonts.google.com/).
+
+### Additional coding resources
+- How to style radio buttons: [Sound Code](https://markheath.net/post/customize-radio-button-css)
+- Fisher-Yates shuffle algorithm: [DEV community](https://dev.to/codebubb/how-to-shuffle-an-array-in-javascript-2ikj)
+- General help:
+    - [w3 schools](https://www.w3schools.com/)
+        - [Local Storage](https://www.w3schools.com/html/html5_webstorage.asp)
+    - [MDN](https://developer.mozilla.org/en-US/)
+    - [stack overflow](https://stackoverflow.com/)
+
+### Mentor
+Can Sucullu provided advice, suggestions and additional resources throughout the project.
