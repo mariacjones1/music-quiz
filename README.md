@@ -210,3 +210,8 @@ N.B. Safari tested on mobile device only.
 | Surface Pro 7 | x |
 | Nest Hub | x |
 
+### Validator testing
+
+| File tested | Validator used | Validator feedback | Actions taken |
+| --- | --- | --- | --- |
+| index.html | [W3C validator](https://validator.w3.org/) | **No issues.**<br>**Warning:** Section lacks heading. Consider using h2-h6 elements to add identifying headings to all sections, or else use a div element instead for any cases where no heading is needed.<br>**Three instances:** From line 55, column 9; to line 55, column 28<br>From line 60, column 9; to line 60, column 41<br>From line 67, column 9; to line 67, column 36 | Line 55 and line 67 are blank sections - no action taken. Paragraph element 'Choose a category to start:' changed to H3 element in section starting on line 60. |
