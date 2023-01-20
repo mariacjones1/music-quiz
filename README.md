@@ -210,7 +210,7 @@ N.B. Safari tested on mobile device only.
 | Surface Pro 7 | x |
 | Nest Hub | x |
 
-### Validator testing
+### Validator tests
 
 | File tested | Validator used | Validator feedback | Actions taken |
 | --- | --- | --- | --- |
@@ -218,3 +218,12 @@ N.B. Safari tested on mobile device only.
 | style.css | [(Jigsaw) validator](https://jigsaw.w3.org/css-validator/) | **No errors.**<br>**Warning:** Imported style sheets are not checked in direct input and file upload modes | N/A |
 | script.js | [JSHint](https://jshint.com/) | **No errors.**<br>**75 warnings** consisting of:<br>Missing semicolon.<br>'const' is available in ES6 (use 'esversion: 6') or Mozilla JS extensions (use moz).<br>'template literal syntax' is only available in ES6 (use 'esversion: 6').<br>'let' is available in ES6 (use 'esversion: 6') or Mozilla JS extensions (use moz).<br>'for of' is available in ES6 (use 'esversion: 6') or Mozilla JS extensions (use moz).<br>Functions declared within loops referencing an outer scoped variable may lead to confusing semantics. (quizQuestions, shuffleQuestions, runQuiz)<br>'destructuring assignment' is available in ES6 (use 'esversion: 6') or Mozilla JS extensions (use moz).<br>Functions declared within loops referencing an outer scoped variable may lead to confusing semantics. (quizQuestions, shuffleQuestions, currentQuestion, resetScore, runQuiz)<br>**One unused variable:** highScore | Missing semicolons added throughout file and unused variable deleted. No other actions taken. |
 | 404.html | [W3C validator](https://validator.w3.org/) | **No errors or warnings.** | N/A |
+
+### Dev Tools Lighthouse tests
+
+| Category | Score |
+| --- | --- |
+| Performance | 97 |
+| Accessability | 100 |
+| Best Practices | 92 |
+| SEO | 100 |
