@@ -420,10 +420,11 @@ let categories = document.getElementsByClassName("category");
 
 document.addEventListener("DOMContentLoaded", function() {
   if (window.localStorage.getItem('highScore') === null) {
-    document.getElementById('high-score').innerHTML = 0;
+    document.getElementById('high-score').innerHTML = 0; // First-time users see high score as 0
   } else {
-    document.getElementById('high-score').innerHTML = window.localStorage.getItem('highScore');
+    document.getElementById('high-score').innerHTML = window.localStorage.getItem('highScore'); // Return users see their previous high score
   }
+    // Selects corresponding question array for selected category
     for (let category of categories) {
         category.addEventListener("click", function() {
             if (this.id === "general") {
@@ -439,6 +440,10 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 })
 
+/**
+ * Runs next function based on text content of
+ * button clicked on
+ */
 function runQuiz() {
   updateMainQuestionHtml(currentQuestion);
   document.getElementById('next-button').addEventListener("click", function() {
@@ -464,8 +469,8 @@ function runQuiz() {
 }
 
 /**
- * Main question HTML template, provides new question
- * and additional song information
+ * Main question HTML template, updates page HTML to
+ * provide new question and additional song information
  */
 function updateMainQuestionHtml() {
   mainQuestionHtml = `
@@ -536,7 +541,8 @@ function nextQuestion() {
 /**
  * Checks selected answer against correct answer in
  * questions array and directs user to either the bonus
- * question (if correct) or the next question (if incorrect)
+ * question (if correct), the next question (if incorrect)
+ * or the final page (if incorrect and question 10)
  */
 function checkAnswer() {
   let userAnswer = document.querySelector('input[name="multiple-choice"]:checked').id;
@@ -568,6 +574,9 @@ function checkAnswer() {
   }
 }
 
+/**
+ * Shows the bonus question (always using the same HTML content)
+ */
 function bonusQuestion() {
   bonusQuestionHtml = `
   <h2>BONUS:</h2>
@@ -581,6 +590,12 @@ function bonusQuestion() {
   document.getElementById('bonus').focus();
 }
 
+/**
+ * Checks the input number for the bonus answer against
+ * the bonus in the questions array for the current question
+ * and directs the user to the next question or the final page
+ * (if question 10)
+ */
 function checkBonusAnswer() {
   let userBonusAnswer = parseInt(document.getElementById('bonus').value);
   let correctBonusAnswer = quizQuestions[currentQuestion].bonus;
@@ -614,21 +629,35 @@ function checkBonusAnswer() {
   }
 }}
 
+/**
+ * Updates the current score by 1 for each correct answer
+ */
 function incrementMainScore() {
   document.getElementById("correct-answers").innerText = ++currentScore;
   updateTotalScore();
 }
 
+/**
+ * Updates the bonus points score by 1 for each correct bonus answer
+ */
 function incrementBonusScore() {
   document.getElementById("bonus-points").innerText = ++bonusScore;
   updateTotalScore();
 }
 
+/**
+ * Calculates the total score by adding together current score
+ * and bonus points
+ */
 function updateTotalScore() {
   totalScore = currentScore + bonusScore;
   document.getElementById('total').innerText = totalScore;
 }
 
+/**
+ * Final page shows user their final scores and gives them
+ * the option to select a category and restart the quiz
+ */
 function completeQuiz() {
   let finalScoreHtml = `
   <h2>Congratulations! You have completed the quiz</h2>
@@ -647,8 +676,9 @@ function completeQuiz() {
   document.getElementById('category-selection').innerHTML = playAgainHtml;
   document.getElementById('extra').innerHTML = '';
 
-  updateHighScore();  
+  updateHighScore();
 
+  // User selects a new category and the quiz starts again
   for (let category of categories) {
     category.addEventListener("click", function() {
         if (this.id === "general") {
@@ -668,6 +698,9 @@ function completeQuiz() {
 }
 }
 
+/**
+ * Resets all scores to 0 when the user restarts the quiz
+ */
 function resetScore() {
   currentScore = 0;
   bonusScore = 0;
@@ -678,6 +711,9 @@ function resetScore() {
   document.getElementById('total').innerHTML = totalScore;
 }
 
+/**
+ * Updates high score in page header
+ */
 function updateHighScore() {
   if (localStorage.getItem('highScore') < totalScore) {
     window.localStorage.setItem("highScore", totalScore);
