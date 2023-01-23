@@ -458,7 +458,7 @@ function runQuiz() {
       if (document.getElementById("bonus").value !== "" && document.getElementById("bonus").value >= 1970 && document.getElementById("bonus").value <= 2022) {
         checkBonusAnswer();
       } else {
-        document.getElementById("bonus").appendChild(createElement("p")).innerHTML = "Please enter a valid year.";
+        document.getElementById("error-message").style.display = "block";
       }
     } else if (this.textContent === "FINISH QUIZ") {
       popUp.style.display = "none";
@@ -583,6 +583,7 @@ function bonusQuestion() {
   <label for="bonus">What year was the single released?</label>
   <br>
   <input type="number" id="bonus" name="year" min="1970" max="2022" required>
+  <p id="error-message">Please enter a valid year.</p>
 `;
 
   document.getElementById("question").innerHTML = bonusQuestionHtml;

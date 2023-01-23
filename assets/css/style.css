@@ -122,6 +122,10 @@ main {
     width: 90px;
 }
 
+#error-message {
+    display: none;
+}
+
 /* Song info and next buttons */
 
 #extra {
