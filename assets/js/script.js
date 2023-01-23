@@ -666,13 +666,24 @@ function completeQuiz() {
   <p>Total: ${totalScore}</p>
   `;
 
+  let newHighScoreHtml = `
+  <h2>Congratulations! New high score!</h2>
+  <p>Correct answers: ${currentScore}</p>
+  <p>Bonus points: ${bonusScore}</p>
+  <p>Total: ${totalScore}</p>`;
+
   let playAgainHtml = `
   <p>Play again?</p>
   <button id="general" class="category"><img src="assets/images/home/general-music-quiz.jpg" alt="General Music Quiz"></button>
   <button id="taylor-swift" class="category"><img src="assets/images/home/taylor-swift-music-quiz.jpg" alt="Taylor Swift Music Quiz"></button>
   `;
 
-  document.getElementById("question").innerHTML = finalScoreHtml;
+  if (localStorage.getItem("highScore") < totalScore) {
+    document.getElementById("question").innerHTML = newHighScoreHtml;
+  } else {
+    document.getElementById("question").innerHTML = finalScoreHtml;
+  }
+
   document.getElementById("category-selection").innerHTML = playAgainHtml;
   document.getElementById("extra").innerHTML = "";
 
