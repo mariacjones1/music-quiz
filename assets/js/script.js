@@ -458,7 +458,7 @@ function runQuiz() {
       if (document.getElementById("bonus").value !== "" && document.getElementById("bonus").value >= 1970 && document.getElementById("bonus").value <= 2022) {
         checkBonusAnswer();
       } else {
-        alert("Invalid answer");
+        document.getElementById("bonus").appendChild(document.createElement("p")).innerHTML = "Please enter a valid year.";
       }
     } else if (this.textContent === "FINISH QUIZ") {
       popUp.style.display = "none";
@@ -621,7 +621,7 @@ function checkBonusAnswer() {
       <p>Click below to go to the next question</p>
       `;
     popUp.style.backgroundColor = "#EA9999";    
-     popUp.style.display = "block";
+    popUp.style.display = "block";
     if (currentQuestion < 9) {
       document.getElementById("next-button").innerHTML = "NEXT QUESTION";
     } else {
