@@ -9,17 +9,17 @@ const generalQuestions = [
     <p>Wanting to start again?</p>
     `,
     options: {
-      a: 'plastic bag',
-      b: 'ball of string',
-      c: 'paper bag',
-      d: 'sad person',
+      a: "plastic bag",
+      b: "ball of string",
+      c: "paper bag",
+      d: "sad person",
     },
-    answer: 'a',
+    answer: "a",
     bonus: 2010,
-    title: 'Firework',
-    artist: 'Katy Perry',
-    img: 'assets/images/general/katy-perry.jpg',
-    link: 'https://www.youtube.com/watch?v=QGJuMBdaqIw&ab_channel=KatyPerryVEVO',
+    title: "Firework",
+    artist: "Katy Perry",
+    img: "assets/images/general/katy-perry.jpg",
+    link: "https://www.youtube.com/watch?v=QGJuMBdaqIw&ab_channel=KatyPerryVEVO",
   },
 
   {
@@ -28,17 +28,17 @@ const generalQuestions = [
     <p>If I stay it will be ______________</p>
     `,
     options: {
-      a: 'fun',
-      b: 'treble',
-      c: 'double',
-      d: 'more so',
+      a: "fun",
+      b: "treble",
+      c: "double",
+      d: "more so",
     },
-    answer: 'c',
+    answer: "c",
     bonus: 1982,
-    title: 'Should I Stay or Should I go?',
-    artist: 'The Clash',
-    img: 'assets/images/general/the-clash.jpg',
-    link: 'https://www.youtube.com/watch?v=xMaE6toi4mk&ab_channel=theclashVEVO',
+    title: "Should I Stay or Should I go?",
+    artist: "The Clash",
+    img: "assets/images/general/the-clash.jpg",
+    link: "https://www.youtube.com/watch?v=xMaE6toi4mk&ab_channel=theclashVEVO",
   },
 
   {
@@ -47,17 +47,17 @@ const generalQuestions = [
     <p>'Cause, darling, I'm a nightmare dressed like a ______________</p>
     `,
     options: {
-      a: 'good dream',
-      b: 'daydream',
-      c: 'good time',
-      d: 'angel',
+      a: "good dream",
+      b: "daydream",
+      c: "good time",
+      d: "angel",
     },
-    answer: 'b',
+    answer: "b",
     bonus: 2014,
-    title: 'Blank Space',
-    artist: 'Taylor Swift',
-    img: 'assets/images/general/taylor-swift.jpg',
-    link: 'https://www.youtube.com/watch?v=e-ORhEE9VVg&ab_channel=TaylorSwiftVEVO',
+    title: "Blank Space",
+    artist: "Taylor Swift",
+    img: "assets/images/general/taylor-swift.jpg",
+    link: "https://www.youtube.com/watch?v=e-ORhEE9VVg&ab_channel=TaylorSwiftVEVO",
   },
 
   {
@@ -67,17 +67,17 @@ const generalQuestions = [
     <p>My ______________ ain't killing me no more</p>
     `,
     options: {
-      a: 'loneliness',
-      b: 'sadness',
-      c: 'misery',
-      d: 'unhappiness',
+      a: "loneliness",
+      b: "sadness",
+      c: "misery",
+      d: "unhappiness",
     },
-    answer: 'a',
+    answer: "a",
     bonus: 2000,
-    title: 'Stronger',
-    artist: 'Britney Spears',
-    img: 'assets/images/general/britney-spears.jpg',
-    link: 'https://www.youtube.com/watch?v=AJWtLf4-WWs&ab_channel=BritneySpearsVEVO',
+    title: "Stronger",
+    artist: "Britney Spears",
+    img: "assets/images/general/britney-spears.jpg",
+    link: "https://www.youtube.com/watch?v=AJWtLf4-WWs&ab_channel=BritneySpearsVEVO",
   },
 
   {
@@ -87,17 +87,17 @@ const generalQuestions = [
     <p>Lying ______________ on the floor</p>
     `,
     options: {
-      a: 'lonely',
-      b: 'curled up',
-      c: 'unclothed',
-      d: 'naked',
+      a: "lonely",
+      b: "curled up",
+      c: "unclothed",
+      d: "naked",
     },
-    answer: 'd',
+    answer: "d",
     bonus: 1997,
-    title: 'Torn',
-    artist: 'Natalie Imbruglia',
-    img: 'assets/images/general/natalie-imbruglia.jpg',
-    link: 'https://www.youtube.com/watch?v=VV1XWJN3nJo&ab_channel=natalieimbrugliaVEVO',
+    title: "Torn",
+    artist: "Natalie Imbruglia",
+    img: "assets/images/general/natalie-imbruglia.jpg",
+    link: "https://www.youtube.com/watch?v=VV1XWJN3nJo&ab_channel=natalieimbrugliaVEVO",
   },
 
   {
@@ -107,17 +107,17 @@ const generalQuestions = [
     <p>Your love life's DOA.</p>
     `,
     options: {
-      a: 'stoked',
-      b: 'broke',
-      c: 'weird',
-      d: 'poor',
+      a: "stoked",
+      b: "broke",
+      c: "weird",
+      d: "poor",
     },
-    answer: 'b',
+    answer: "b",
     bonus: 1995,
-    title: 'I\'ll Be There For You',
-    artist: 'The Rembrandts',
-    img: 'assets/images/general/the-rembrandts.jpg',
-    link: 'https://www.youtube.com/watch?v=CXnEgbDcITo&ab_channel=TheRembrandtsVevo',
+    title: "I'll Be There For You",
+    artist: "The Rembrandts",
+    img: "assets/images/general/the-rembrandts.jpg",
+    link: "https://www.youtube.com/watch?v=CXnEgbDcITo&ab_channel=TheRembrandtsVevo",
   },
 
   {
@@ -127,17 +127,17 @@ const generalQuestions = [
     <p>Such a lovely ______________</p>
     `,
     options: {
-      a: 'case',
-      b: 'brace',
-      c: 'ace',
-      d: 'face',
+      a: "case",
+      b: "brace",
+      c: "ace",
+      d: "face",
     },
-    answer: 'd',
+    answer: "d",
     bonus: 1976,
-    title: 'Hotel California',
-    artist: 'The Eagles',
-    img: 'assets/images/general/the-eagles.jpg',
-    link: 'https://www.youtube.com/watch?v=09839DpTctU&ab_channel=Eagles',
+    title: "Hotel California",
+    artist: "The Eagles",
+    img: "assets/images/general/the-eagles.jpg",
+    link: "https://www.youtube.com/watch?v=09839DpTctU&ab_channel=Eagles",
   },
 
   {
@@ -146,17 +146,17 @@ const generalQuestions = [
     <p>Not me, if you ever cared to ask</p>
     `,
     options: {
-      a: 'healthy',
-      b: 'wealthy',
-      c: 'smiley',
-      d: 'easy',
+      a: "healthy",
+      b: "wealthy",
+      c: "smiley",
+      d: "easy",
     },
-    answer: 'a',
+    answer: "a",
     bonus: 2021,
-    title: 'good 4 u',
-    artist: 'Olivia Rodrigo',
-    img: 'assets/images/general/olivia-rodrigo.jpg',
-    link: 'https://www.youtube.com/watch?v=gNi_6U5Pm_o&ab_channel=OliviaRodrigoVEVO',
+    title: "good 4 u",
+    artist: "Olivia Rodrigo",
+    img: "assets/images/general/olivia-rodrigo.jpg",
+    link: "https://www.youtube.com/watch?v=gNi_6U5Pm_o&ab_channel=OliviaRodrigoVEVO",
   },
 
   {
@@ -165,17 +165,17 @@ const generalQuestions = [
     <p>I was defeated, you won the ______________</p>
     `,
     options: {
-      a: 'battle',
-      b: 'game',
-      c: 'war',
-      d: 'day',
+      a: "battle",
+      b: "game",
+      c: "war",
+      d: "day",
     },
-    answer: 'c',
+    answer: "c",
     bonus: 1974,
-    title: 'Waterloo',
-    artist: 'ABBA',
-    img: 'assets/images/general/abba.jpg',
-    link: 'https://www.youtube.com/watch?v=Sj_9CiNkkn4&ab_channel=AbbaVEVO',
+    title: "Waterloo",
+    artist: "ABBA",
+    img: "assets/images/general/abba.jpg",
+    link: "https://www.youtube.com/watch?v=Sj_9CiNkkn4&ab_channel=AbbaVEVO",
   },
 
   {
@@ -184,17 +184,17 @@ const generalQuestions = [
     <p>I wanna feel the ______________ with somebody</p>
     `,
     options: {
-      a: 'heat',
-      b: 'beat',
-      c: 'music',
-      d: 'moves',
+      a: "heat",
+      b: "beat",
+      c: "music",
+      d: "moves",
     },
-    answer: 'a',
+    answer: "a",
     bonus: 1987,
-    title: 'I Wanna Dance With Somebody',
-    artist: 'Whitney Houston',
-    img: 'assets/images/general/whitney-houston.jpg',
-    link: 'https://www.youtube.com/watch?v=eH3giaIzONA&ab_channel=whitneyhoustonVEVO',
+    title: "I Wanna Dance With Somebody",
+    artist: "Whitney Houston",
+    img: "assets/images/general/whitney-houston.jpg",
+    link: "https://www.youtube.com/watch?v=eH3giaIzONA&ab_channel=whitneyhoustonVEVO",
   },
 ];
 
@@ -205,17 +205,17 @@ const taylorSwiftQuestions = [
       <p>I'll be waiting, all there's left to do is run</p>
       `,
       options: {
-        a: 'alone',
-        b: 'together',
-        c: 'as one',
-        d: 'forever',
+        a: "alone",
+        b: "together",
+        c: "as one",
+        d: "forever",
       },
-      answer: 'a',
+      answer: "a",
       bonus: 2008,
-      title: 'Love Story',
-      artist: 'Taylor Swift',
-      img: 'assets/images/taylor-swift/love-story.jpg',
-      link: 'https://www.youtube.com/watch?v=8xg3vE8Ie_E&ab_channel=TaylorSwiftVEVO',
+      title: "Love Story",
+      artist: "Taylor Swift",
+      img: "assets/images/taylor-swift/love-story.jpg",
+      link: "https://www.youtube.com/watch?v=8xg3vE8Ie_E&ab_channel=TaylorSwiftVEVO",
   },
 
   {
@@ -224,17 +224,17 @@ const taylorSwiftQuestions = [
     <p>I check it once, then I check it ______________, oh!</p>
     `,
     options: {
-      a: 'once more',
-      b: 'again',
-      c: 'twice',
-      d: 'five times',
+      a: "once more",
+      b: "again",
+      c: "twice",
+      d: "five times",
     },
-    answer: 'c',
+    answer: "c",
     bonus: 2017,
-    title: 'Look What You Made Me Do',
-    artist: 'Taylor Swift',
-    img: 'assets/images/taylor-swift/look-what-you-made-me-do.jpg',
-    link: 'https://www.youtube.com/watch?v=3tmd-ClpJxA&ab_channel=TaylorSwiftVEVO',
+    title: "Look What You Made Me Do",
+    artist: "Taylor Swift",
+    img: "assets/images/taylor-swift/look-what-you-made-me-do.jpg",
+    link: "https://www.youtube.com/watch?v=3tmd-ClpJxA&ab_channel=TaylorSwiftVEVO",
   },
 
   {
@@ -243,17 +243,17 @@ const taylorSwiftQuestions = [
     <p>It must be ______________ always rooting for the anti-hero</p>
     `,
     options: {
-      a: 'fun',
-      b: 'draining',
-      c: 'exciting',
-      d: 'exhausting',
+      a: "fun",
+      b: "draining",
+      c: "exciting",
+      d: "exhausting",
     },
-    answer: 'd',
+    answer: "d",
     bonus: 2022,
-    title: 'Anti-Hero',
-    artist: 'Taylor Swift',
-    img: 'assets/images/taylor-swift/anti-hero.jpg',
-    link: 'https://www.youtube.com/watch?v=b1kbLwvqugk&ab_channel=TaylorSwiftVEVO',
+    title: "Anti-Hero",
+    artist: "Taylor Swift",
+    img: "assets/images/taylor-swift/anti-hero.jpg",
+    link: "https://www.youtube.com/watch?v=b1kbLwvqugk&ab_channel=TaylorSwiftVEVO",
   },
 
   {
@@ -262,17 +262,17 @@ const taylorSwiftQuestions = [
     <p>The only thing that keeps me wishing on a ______________</p>
     `,
     options: {
-      a: 'shooting star',
-      b: 'falling star',
-      c: 'wishing star',
-      d: 'shining star',
+      a: "shooting star",
+      b: "falling star",
+      c: "wishing star",
+      d: "shining star",
     },
-    answer: 'c',
+    answer: "c",
     bonus: 2007,
-    title: 'Teardrops On My Guitar',
-    artist: 'Taylor Swift',
-    img: 'assets/images/taylor-swift/teardrops-on-my-guitar.jpg',
-    link: 'https://www.youtube.com/watch?v=xKCek6_dB0M&ab_channel=TaylorSwiftVEVO',
+    title: "Teardrops On My Guitar",
+    artist: "Taylor Swift",
+    img: "assets/images/taylor-swift/teardrops-on-my-guitar.jpg",
+    link: "https://www.youtube.com/watch?v=xKCek6_dB0M&ab_channel=TaylorSwiftVEVO",
   },
 
   {
@@ -283,17 +283,17 @@ const taylorSwiftQuestions = [
     <p>I ______________</p>
     `,
     options: {
-      a: 'follow',
-      b: 'go with you',
-      c: 'stray with you',
-      d: 'watch you go',
+      a: "follow",
+      b: "go with you",
+      c: "stray with you",
+      d: "watch you go",
     },
-    answer: 'a',
+    answer: "a",
     bonus: 2020,
-    title: 'willow',
-    artist: 'Taylor Swift',
-    img: 'assets/images/taylor-swift/willow.jpg',
-    link: 'https://www.youtube.com/watch?v=RsEZmictANA&ab_channel=TaylorSwiftVEVO',
+    title: "willow",
+    artist: "Taylor Swift",
+    img: "assets/images/taylor-swift/willow.jpg",
+    link: "https://www.youtube.com/watch?v=RsEZmictANA&ab_channel=TaylorSwiftVEVO",
   },
 
   {
@@ -303,17 +303,17 @@ const taylorSwiftQuestions = [
     <p>If I was a man</p>
     `,
     options: {
-      a: 'better',
-      b: 'easier',
-      c: 'faster',
-      d: 'quicker',
+      a: "better",
+      b: "easier",
+      c: "faster",
+      d: "quicker",
     },
-    answer: 'd',
+    answer: "d",
     bonus: 2020,
-    title: 'The Man',
-    artist: 'Taylor Swift',
-    img: 'assets/images/taylor-swift/the-man.jpg',
-    link: 'https://www.youtube.com/watch?v=AqAJLh9wuZ0&ab_channel=TaylorSwiftVEVO',
+    title: "The Man",
+    artist: "Taylor Swift",
+    img: "assets/images/taylor-swift/the-man.jpg",
+    link: "https://www.youtube.com/watch?v=AqAJLh9wuZ0&ab_channel=TaylorSwiftVEVO",
   },
 
   {
@@ -323,17 +323,17 @@ const taylorSwiftQuestions = [
     <p>She's Cheer Captain, and I'm ______________</p>
     `,
     options: {
-      a: 'just a nerd',
-      b: 'on the bleachers',
-      c: 'uncoordinated',
-      d: 'in the background',
+      a: "just a nerd",
+      b: "on the bleachers",
+      c: "uncoordinated",
+      d: "in the background",
     },
-    answer: 'b',
+    answer: "b",
     bonus: 2009,
-    title: 'You Belong With Me',
-    artist: 'Taylor Swift',
-    img: 'assets/images/taylor-swift/you-belong-with-me.jpg',
-    link: 'https://www.youtube.com/watch?v=VuNIsY6JdUw&ab_channel=TaylorSwiftVEVO',
+    title: "You Belong With Me",
+    artist: "Taylor Swift",
+    img: "assets/images/taylor-swift/you-belong-with-me.jpg",
+    link: "https://www.youtube.com/watch?v=VuNIsY6JdUw&ab_channel=TaylorSwiftVEVO",
   },
 
   {
@@ -343,17 +343,17 @@ const taylorSwiftQuestions = [
     <p>Drunk under a streetlight</p>
     `,
     options: {
-      a: 'blue jeans',
-      b: 'hoodie',
-      c: 'Levi\'s',
-      d: 'Nikes',
+      a: "blue jeans",
+      b: "hoodie",
+      c: "Levi's",
+      d: "Nikes",
     },
-    answer: 'c',
+    answer: "c",
     bonus: 2020,
-    title: 'cardigan',
-    artist: 'Taylor Swift',
-    img: 'assets/images/taylor-swift/cardigan.jpg',
-    link: 'https://www.youtube.com/watch?v=K-a8s8OLBSE&ab_channel=TaylorSwiftVEVO',
+    title: "cardigan",
+    artist: "Taylor Swift",
+    img: "assets/images/taylor-swift/cardigan.jpg",
+    link: "https://www.youtube.com/watch?v=K-a8s8OLBSE&ab_channel=TaylorSwiftVEVO",
   },
 
   {
@@ -362,17 +362,17 @@ const taylorSwiftQuestions = [
     <p>Miscommunications lead to ______________</p>
     `,
     options: {
-      a: 'fall out',
-      b: 'break-ups',
-      c: 'endings',
-      d: 'fighting',
+      a: "fall out",
+      b: "break-ups",
+      c: "endings",
+      d: "fighting",
     },
-    answer: 'a',
+    answer: "a",
     bonus: 2011,
-    title: 'The Story of Us',
-    artist: 'Taylor Swift',
-     img: 'assets/images/taylor-swift/the-story-of-us.jpg',
-    link: 'https://www.youtube.com/watch?v=nN6VR92V70M&ab_channel=TaylorSwiftVEVO',
+    title: "The Story of Us",
+    artist: "Taylor Swift",
+     img: "assets/images/taylor-swift/the-story-of-us.jpg",
+    link: "https://www.youtube.com/watch?v=nN6VR92V70M&ab_channel=TaylorSwiftVEVO",
   },
 
   {
@@ -382,27 +382,27 @@ const taylorSwiftQuestions = [
     <p>Is the love that you ______________</p>
     `,
     options: {
-      a: 'lost',
-      b: 'had',
-      c: 'threw away',
-      d: 'discarded',
+      a: "lost",
+      b: "had",
+      c: "threw away",
+      d: "discarded",
     },
-    answer: 'b',
+    answer: "b",
     bonus: 2021,
-    title: 'I Bet You Think About Me',
-    artist: 'Taylor Swift',
-    img: 'assets/images/taylor-swift/i-bet-you-think-about-me.jpg',
-    link: 'https://www.youtube.com/watch?v=5UMCrq-bBCg&ab_channel=TaylorSwiftVEVO',
+    title: "I Bet You Think About Me",
+    artist: "Taylor Swift",
+    img: "assets/images/taylor-swift/i-bet-you-think-about-me.jpg",
+    link: "https://www.youtube.com/watch?v=5UMCrq-bBCg&ab_channel=TaylorSwiftVEVO",
   },
 ];
 
 // Create questions and content
 let currentQuestion = 0;
 let quizQuestions = [];
-let mainQuestionHtml = '';
-let songInfoHtml = '';
-let bonusQuestionHtml = '';
-let submitButton = '';
+let mainQuestionHtml = "";
+let songInfoHtml = "";
+let bonusQuestionHtml = "";
+let submitButton = "";
 
 // Scores
 let currentScore = parseInt(document.getElementById("correct-answers").innerText);
@@ -410,7 +410,7 @@ let bonusScore = parseInt(document.getElementById("bonus-points").innerText);
 let totalScore = parseInt(document.getElementById("total").innerText);
 
 // Correct and incorrect answer pop-ups
-let popUp = document.getElementById('answer-pop-up');
+let popUp = document.getElementById("answer-pop-up");
 
 // Wait for DOM to finish loading before running the quiz
 // Get category selection buttons on homepage and add event listeners
@@ -418,10 +418,10 @@ let popUp = document.getElementById('answer-pop-up');
 let categories = document.getElementsByClassName("category");
 
 document.addEventListener("DOMContentLoaded", function() {
-  if (window.localStorage.getItem('highScore') === null) {
-    document.getElementById('high-score').innerHTML = 0; // First-time users see high score as 0
+  if (window.localStorage.getItem("highScore") === null) {
+    document.getElementById("high-score").innerHTML = 0; // First-time users see high score as 0
   } else {
-    document.getElementById('high-score').innerHTML = window.localStorage.getItem('highScore'); // Return users see their previous high score
+    document.getElementById("high-score").innerHTML = window.localStorage.getItem("highScore"); // Return users see their previous high score
   }
     // Selects corresponding question array for selected category
     for (let category of categories) {
@@ -445,23 +445,23 @@ document.addEventListener("DOMContentLoaded", function() {
  */
 function runQuiz() {
   updateMainQuestionHtml(currentQuestion);
-  document.getElementById('next-button').addEventListener("click", function() {
+  document.getElementById("next-button").addEventListener("click", function() {
     if (this.textContent === "NEXT QUESTION") {
-      popUp.style.display = 'none';
+      popUp.style.display = "none";
       nextQuestion();
     } else if (this.textContent === "SUBMIT") {
       checkAnswer();
     } else if (this.textContent === "BONUS QUESTION") {
-      popUp.style.display = 'none';
+      popUp.style.display = "none";
       bonusQuestion();
     } else if (this.textContent === "SUBMIT BONUS") {
-      if (document.getElementById('bonus').value !== '' && document.getElementById('bonus').value >= 1970 && document.getElementById('bonus').value <= 2022) {
+      if (document.getElementById("bonus").value !== "" && document.getElementById("bonus").value >= 1970 && document.getElementById("bonus").value <= 2022) {
         checkBonusAnswer();
       } else {
-        alert('Invalid answer');
+        alert("Invalid answer");
       }
     } else if (this.textContent === "FINISH QUIZ") {
-      popUp.style.display = 'none';
+      popUp.style.display = "none";
       completeQuiz();
     } 
   });
@@ -511,9 +511,9 @@ function updateMainQuestionHtml() {
   <button id="next-button">SUBMIT</button>
   `;
 
-  document.getElementById('question').innerHTML = mainQuestionHtml;
-  document.getElementById('extra').innerHTML = songInfoHtml;
-  document.getElementById('category-selection').innerHTML = submitButton;
+  document.getElementById("question").innerHTML = mainQuestionHtml;
+  document.getElementById("extra").innerHTML = songInfoHtml;
+  document.getElementById("category-selection").innerHTML = submitButton;
 }
 
 /**
@@ -529,7 +529,7 @@ function shuffleQuestions() {
 
 /**
  * Shows the next question, called when the user starts the quiz by
- * choosing a category or after the user clicks on a 'Next Question'
+ * choosing a category or after the user clicks on a "Next Question"
  * button
  */
 function nextQuestion() {
@@ -552,10 +552,10 @@ function checkAnswer() {
       <h2>CORRECT!</h2>
       <p>Click below to go to the bonus question</p>
       `;
-    popUp.style.backgroundColor = '#B6D7A8';
-    popUp.style.display = 'block';
+    popUp.style.backgroundColor = "#B6D7A8";
+    popUp.style.display = "block";
     incrementMainScore();
-    document.getElementById("next-button").innerHTML = 'BONUS QUESTION';
+    document.getElementById("next-button").innerHTML = "BONUS QUESTION";
   } else if (userAnswer !== correctAnswer) {
     popUp.innerHTML = `
       <h2>Incorrect! :(</h2>
@@ -563,12 +563,12 @@ function checkAnswer() {
       <a href=${quizQuestions[currentQuestion].link} target="_blank" aria-label="Play the music video on YouTube (opens in a new tab)">Play song (opens in a new tab)</a>
       <p>Click below to go to the next question</p>
       `;
-    popUp.style.backgroundColor = '#EA9999'; 
-     popUp.style.display = 'block';
+    popUp.style.backgroundColor = "#EA9999"; 
+    popUp.style.display = "block";
     if (currentQuestion < 9) {
-      document.getElementById('next-button').innerHTML = 'NEXT QUESTION';
+      document.getElementById("next-button").innerHTML = "NEXT QUESTION";
     } else {
-      document.getElementById('next-button').innerHTML = 'FINISH QUIZ';
+      document.getElementById("next-button").innerHTML = "FINISH QUIZ";
     }  
   }
 }
@@ -584,9 +584,9 @@ function bonusQuestion() {
   <input type="number" id="bonus" name="year" min="1970" max="2022" required>
 `;
 
-  document.getElementById('question').innerHTML = bonusQuestionHtml;
-  document.getElementById('next-button').innerHTML = 'SUBMIT BONUS';
-  document.getElementById('bonus').focus();
+  document.getElementById("question").innerHTML = bonusQuestionHtml;
+  document.getElementById("next-button").innerHTML = "SUBMIT BONUS";
+  document.getElementById("bonus").focus();
 }
 
 /**
@@ -596,7 +596,7 @@ function bonusQuestion() {
  * (if question 10)
  */
 function checkBonusAnswer() {
-  let userBonusAnswer = parseInt(document.getElementById('bonus').value);
+  let userBonusAnswer = parseInt(document.getElementById("bonus").value);
   let correctBonusAnswer = quizQuestions[currentQuestion].bonus;
 
   if (userBonusAnswer === correctBonusAnswer) {
@@ -605,12 +605,12 @@ function checkBonusAnswer() {
       <a href=${quizQuestions[currentQuestion].link} target="_blank" aria-label="Play the music video on YouTube (opens in a new tab)">Play song (opens in a new tab)</a>
       <p>Click below to go to the next question</p>
       `;
-    popUp.style.display = 'block';
+    popUp.style.display = "block";
     incrementBonusScore();
     if (currentQuestion < 9) {
-      document.getElementById('next-button').innerHTML = 'NEXT QUESTION';
+      document.getElementById("next-button").innerHTML = "NEXT QUESTION";
     } else {
-      document.getElementById('next-button').innerHTML = 'FINISH QUIZ';
+      document.getElementById("next-button").innerHTML = "FINISH QUIZ";
     }
   } else {
     popUp.innerHTML = `
@@ -619,12 +619,12 @@ function checkBonusAnswer() {
       <a href=${quizQuestions[currentQuestion].link} target="_blank" aria-label="Play the music video on YouTube (opens in a new tab)">Play song (opens in a new tab)</a>
       <p>Click below to go to the next question</p>
       `;
-    popUp.style.backgroundColor = '#EA9999';    
-     popUp.style.display = 'block';
+    popUp.style.backgroundColor = "#EA9999";    
+     popUp.style.display = "block";
     if (currentQuestion < 9) {
-      document.getElementById('next-button').innerHTML = 'NEXT QUESTION';
+      document.getElementById("next-button").innerHTML = "NEXT QUESTION";
     } else {
-      document.getElementById('next-button').innerHTML = 'FINISH QUIZ';
+      document.getElementById("next-button").innerHTML = "FINISH QUIZ";
   }
 }}
 
@@ -650,7 +650,7 @@ function incrementBonusScore() {
  */
 function updateTotalScore() {
   totalScore = currentScore + bonusScore;
-  document.getElementById('total').innerText = totalScore;
+  document.getElementById("total").innerText = totalScore;
 }
 
 /**
@@ -671,9 +671,9 @@ function completeQuiz() {
   <button id="taylor-swift" class="category"><img src="assets/images/home/taylor-swift-music-quiz.jpg" alt="Taylor Swift Music Quiz"></button>
   `;
 
-  document.getElementById('question').innerHTML = finalScoreHtml;
-  document.getElementById('category-selection').innerHTML = playAgainHtml;
-  document.getElementById('extra').innerHTML = '';
+  document.getElementById("question").innerHTML = finalScoreHtml;
+  document.getElementById("category-selection").innerHTML = playAgainHtml;
+  document.getElementById("extra").innerHTML = "";
 
   updateHighScore();
 
@@ -705,18 +705,19 @@ function resetScore() {
   bonusScore = 0;
   totalScore = 0;
 
-  document.getElementById('correct-answers').innerHTML = currentScore;
-  document.getElementById('bonus-points').innerHTML = bonusScore;
-  document.getElementById('total').innerHTML = totalScore;
+  document.getElementById("correct-answers").innerHTML = currentScore;
+  document.getElementById("bonus-points").innerHTML = bonusScore;
+  document.getElementById("total").innerHTML = totalScore;
 }
 
 /**
- * Updates high score in page header
+ * Updates high score in page header.
+ * High score is stored in local storage.
  */
 function updateHighScore() {
-  if (localStorage.getItem('highScore') < totalScore) {
+  if (localStorage.getItem("highScore") < totalScore) {
     window.localStorage.setItem("highScore", totalScore);
   }
 
-  document.getElementById("high-score").innerHTML = `${localStorage.getItem('highScore')}`;
+  document.getElementById("high-score").innerHTML = `${localStorage.getItem("highScore")}`;
 }
