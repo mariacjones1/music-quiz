@@ -76,11 +76,11 @@ Final website: [https://mariacjones1.github.io/music-quiz/](https://mariacjones1
     - User will only see the bonus questions for main questions they answer correctly.
     - Asks user the year the single came out.
     - Features number input going from 1970 - 2022 (can be adjusted if new songs are added that came out before or after these years).
-    - User will see an alert if they leave the input blank or try to enter a year outside the accepted range.
+    - User will see an error message below the answer input if they leave it blank or try to enter a year outside the accepted range.
 
 ![Bonus question](documentation/screenshots/bonus-question.png)
 
-![Bonus question invalid answer alert](documentation/screenshots/invalid-answer-alert.png)
+![Bonus question invalid answer alert](documentation/screenshots/invalid-bonus-answer.png)
 
 - Correct/incorrect answer pop-ups
     - User will see a pop-up after answering each question, telling them if they answered correctly or incorrectly.
@@ -199,27 +199,27 @@ Final website: [https://mariacjones1.github.io/music-quiz/](https://mariacjones1
 
 ### Browser tests (final)
 
-| Browser | No layout issues | All features work |
+| Browser | Layout | Features |
 | --- | --- | --- |
-| Chrome | x | x |
-| Firefox | x | x |
-| Edge | x | x |
-| Safari* | x | x |
+| Chrome | ✓ | ✓ |
+| Firefox | ✓ | ✓ |
+| Edge | ✓ | ✓ |
+| Safari* | ✓ | ✓ |
 N.B. Safari tested on mobile device only.
 
 ### Device/screen size tests (final)
 (Tested using Dev Tools, portrait and landscape where applicable)
 
-| Device | No layout issues |
+| Device | Layout |
 | --- | --- |
-| Dell desktop screen (model unknown, size 1920x1200) | x |
-| HP laptop screen (model unknown, size 1536 x 864) | x |
-| iPhone SE | x |
-| Pixel 5 | x |
-| Samsung Galaxy S20 Ultra | x |
-| iPad Air | x |
-| Surface Pro 7 | x |
-| Nest Hub | x |
+| Dell desktop screen (model unknown, size 1920x1200) | ✓ |
+| HP laptop screen (model unknown, size 1536 x 864) | ✓ |
+| iPhone SE | ✓ |
+| Pixel 5 | ✓ |
+| Samsung Galaxy S20 Ultra | ✓ |
+| iPad Air | ✓ |
+| Surface Pro 7 | ✓ |
+| Nest Hub | ✓ |
 
 ### Validator tests
 
