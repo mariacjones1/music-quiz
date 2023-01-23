@@ -138,6 +138,11 @@ Final website: [https://mariacjones1.github.io/music-quiz/](https://mariacjones1
     - Roboto was chosen as the main font as it looks nice and is easy to read. Bubblegum Sans was chosen for the logo font as it is visually different and more fun, without being distracting.
     - The blue and purple for the buttons were chosen to go with the background image and also to provide enough contrast to each other that it is obvious when a button is being hovered over or has been selected. The blue colour also matches the default background if the image fails to load.
 
+### Future improvements
+- Store quiz questions in JSON files instead of keeping the arrays at the start of the JavaScript file. This would allow for easier updating of questions, or adding new questions or categories without needing to update the JavaScript file itself (with the exception of needing to add any new categories to the category selection function).
+    - In order to put the questions in a JSON file, the questions themselves would need to be changed from template literals to an array, which the JavaScript function would then loop through in order to generate them for the user.
+- Give users the option to create usernames and see high scores of other users (requires addtional back-end functionality which has not yet been covered in the course). A more basic version using local storage allowing users to see high scores of other users who have used the same device and browser could be used in the meantime.
+
 <hr>
 
 ## Wireframes
