@@ -458,7 +458,7 @@ function runQuiz() {
       if (document.getElementById("bonus").value !== "" && document.getElementById("bonus").value >= 1970 && document.getElementById("bonus").value <= 2022) {
         checkBonusAnswer();
       } else {
-        document.getElementById("bonus").appendChild(document.createElement("p")).innerHTML = "Please enter a valid year.";
+        document.getElementById("bonus").appendChild(createElement("p")).innerHTML = "Please enter a valid year.";
       }
     } else if (this.textContent === "FINISH QUIZ") {
       popUp.style.display = "none";
