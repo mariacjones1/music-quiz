@@ -142,6 +142,7 @@ Final website: [https://mariacjones1.github.io/music-quiz/](https://mariacjones1
 - Store quiz questions in JSON files instead of keeping the arrays at the start of the JavaScript file. This would allow for easier updating of questions, or adding new questions or categories without needing to update the JavaScript file itself (with the exception of needing to add any new categories to the category selection function).
     - In order to put the questions in a JSON file, the questions themselves would need to be changed from template literals to an array, which the JavaScript function would then loop through in order to generate them for the user.
 - Give users the option to create usernames and see high scores of other users (requires addtional back-end functionality which has not yet been covered in the course). A more basic version using local storage allowing users to see high scores of other users who have used the same device and browser could be used in the meantime.
+- Add additional layers of validation to handle empty or invalid data. At the moment, the bonus answer input is validated using the HTML (checked inside a JS function); however, JavaScript validation could also be used. Down the line, once projects use more back-end programming languages and potentially handle more sensitive data, extra layers of validation will be required.
 
 <hr>
 
