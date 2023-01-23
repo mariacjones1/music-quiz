@@ -10,7 +10,7 @@ Final website: [https://mariacjones1.github.io/music-quiz/](https://mariacjones1
 ## User goals
 - To test knowledge of song lyrics by answering quiz questions.
 - To be able to do the quiz on any device (desktop, tablet, mobile).
-- To be able to see their previous high score.
+- To be able to see their previous high score (if applicable) as well as current scores while taking the quiz.
 - To be able to repeat the quiz as many times as desired without having to refresh the page to go back to the start.
 - To be able to read the instructions before completing the quiz.
 - To see questions in a random order.
@@ -131,6 +131,12 @@ Final website: [https://mariacjones1.github.io/music-quiz/](https://mariacjones1
     - User experience is enhanced by featuring a favicon relevant to the site (music notes over a CD)
 
 ![Favicon](documentation/screenshots/favicon.png)
+
+- Style choices
+    - The background image was chosen to look nicer than a plain-coloured background, but it uses light colours and no harsh lines so it does not distract from the main quiz area.
+    - The light grey background for the main quiz area was chosen as there is still enough contrast to be able to easily reaad the text over it, but it is less harsh on the eyes than a bright white.
+    - Roboto was chosen as the main font as it looks nice and is easy to read. Bubblegum Sans was chosen for the logo font as it is visually different and more fun, without being distracting.
+    - The blue and purple for the buttons were chosen to go with the background image and also to provide enough contrast to each other that it is obvious when a button is being hovered over or has been selected. The blue colour also matches the default background if the image fails to load.
 
 <hr>
 
