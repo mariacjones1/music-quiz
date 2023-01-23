@@ -519,6 +519,7 @@ function updateMainQuestionHtml() {
 /**
  * Shuffles the questions so they appear in a random order
  * each time the user plays (Fisher–Yates shuffle algorithm)
+ * - code found on DEV community (https://dev.to/codebubb/how-to-shuffle-an-array-in-javascript-2ikj)
  */
 function shuffleQuestions() {
     for (let i = quizQuestions.length - 1; i > 0; i--) {
@@ -711,8 +712,8 @@ function resetScore() {
 }
 
 /**
- * Updates high score in page header.
- * High score is stored in local storage.
+ * Updates high score in page header
+ * High score is stored in local storage
  */
 function updateHighScore() {
   if (localStorage.getItem("highScore") < totalScore) {
