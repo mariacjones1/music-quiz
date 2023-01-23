@@ -188,7 +188,7 @@ Final website: [https://mariacjones1.github.io/music-quiz/](https://mariacjones1
 
 | Bug | Fix |
 | --- | --- |
-| Background image does not cover screen, despite background-size property being set to 'cover'. | Set HTML height to 100%, however when tested on smaller devices the background still did not cover the bottom of the screen after scrolling down. Moved the HTML height property to a media query to apply only to screens with width 770px and above. This worked fine until tested on wider devices in landscape mode, so set media query to apply only when device orientation is portrait. Final solution. |
+| Background image does not cover screen, despite background-size property being set to 'cover'. | Solved by setting HTML height to 100% for screens with width 770px or more and portrait, or with height 900px or more and landscape. |
 | Category selection buttons showed with rounded corners on mobile screen, despite no border radius property being set. This resulted in the corners of the images being cut off. When reappearing on the final page, only one button had this appearance, making them inconsitent. | Solved by setting the same padding to all sides of the category selection buttons. Also added a border so they are consistent with other buttons on the site. |
 | Question content did not change when a new question was meant to be shown. | Solved by putting question template literal into a function, to be called each time a new question was needed. |
 | No functions running on site preview. | Missing comma in question array flagged in Dev Tools. Issue solved by adding comma to JavaScript file. |
